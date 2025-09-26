@@ -147,8 +147,10 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		
 		default:
-		array_push(global.party, [global.txtinput,[],100,0,0,[]])
-		global.goto = global.menu + 0.01
+		if global.txtinput != "" {
+			array_push(global.party, [global.txtinput,[],100,0,0,[]])
+			global.goto = global.menu + 0.01
+		}
 		break;
 		
 		
