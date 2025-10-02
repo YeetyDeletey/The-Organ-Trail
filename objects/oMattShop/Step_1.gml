@@ -1,11 +1,11 @@
 
 
 
-if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick = true and mouse_check_button_pressed(mb_left) and global.trans = false {
+if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick = true and mouse_check_button_pressed(mb_left) and global.trans = false and global.txtinput != "" {
 	switch global.menu {
 		//global.menu being 0 means its the base screen
 		//you only get off it after a screenwipe
-		case 0:								//Main menu starting screen
+		case 0.1:								//Main menu starting screen
 		switch global.txtinput {
 							//txtinput is whatever the player inputted
 							//last num of screenwipe sets global.goto to itself
@@ -49,8 +49,30 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		//when not on the main screen, it is assumed that you're 
 		//clicking through multiple text boxes
 		default:
-		show_debug_message("EEEEE")
-		screenwipe(375,170,16,0)
+		switch global.menu {
+			case 1:
+			oxenspent = 40*real(global.txtinput)
+			break;
+			
+			case 2:
+			foodspent = 1*real(global.txtinput)
+			break;
+			
+			case 3:
+			clothingspent = 10*real(global.txtinput)
+			break;
+			
+			case 4:
+			ammospent = 2*real(global.txtinput)
+			break;
+			
+			case 5:
+			sparespent = 10*real(global.txtinput)
+			break;
+		}
+		bill = oxenspent + foodspent + clothingspent + ammospent + sparespent
+		tempmoney = global.money - bill
+		screenwipe(375,170,18,0.1)
 		break;
 	}
 }
@@ -58,20 +80,35 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 if global.goto != 0 {
 	switch global.goto {
 		//this is the code that actually adds new stuff to the screen
-		case 0:
+		case 0.1:
 		text(375,170,"            Date")
 		instance_create_depth(375,205,1,oMattBanner)
-		button(375,240,"1. Oxen",1)	
-		button(375,275,"2. Food",2)
-		button(375,310,"3. Clothing",3)
-		button(375,345,"4. Ammunition",4)
-		button(375,380,"5. Spare Parts",5)
+		txt = ""; for (i = 0; i < (4-string_length(string(oxenspent)));i++) {txt += " "}; 
+		txt += "$" + string(oxenspent) + ".00"
+		button(375,240,"1. Oxen           " + txt,1)
+		txt = ""; for (i = 0; i < (4-string_length(string(foodspent)));i++) {txt += " "}; 
+		txt += "$" + string(foodspent) + ".00"
+		button(375,275,"2. Food           " + txt,2)
+		txt = ""; for (i = 0; i < (4-string_length(string(clothingspent)));i++) {txt += " "}; 
+		txt += "$" + string(clothingspent) + ".00"
+		button(375,310,"3. Clothing       " + txt,3)
+		txt = ""; for (i = 0; i < (4-string_length(string(ammospent)));i++) {txt += " "}; 
+		txt += "$" + string(ammospent) + ".00"
+		button(375,345,"4. Ammunition     " + txt,4)
+		txt = ""; for (i = 0; i < (4-string_length(string(sparespent)));i++) {txt += " "}; 
+		txt += "$" + string(sparespent) + ".00"
+		button(375,380,"5. Spare Parts    " + txt,5)
 		button(375,415,"6. Leave store",6)
 		instance_create_depth(375,450,1,oMattBanner)
-		text(375,485,  "      Total bill:")
-
-
-		text(375,555,"Amount you have: Money")
+		txt = "      Total bill: "
+		for (i = 0; i < (4-string_length(string(bill)));i++) {txt += " "}
+		txt += "$" + string(bill) + ".00"
+		text(375,485,txt)
+		
+		txt = "Amount you have:  "
+		for (i = 0; i < (4-moneylen);i++) {txt += " "}
+		txt += "$" + string(tempmoney) + ".00"
+		text(375,555,txt)
 
 		text(375,625," Which item would you")
 		write(375,660," like to buy? ",6)
@@ -87,22 +124,20 @@ if global.goto != 0 {
 		
 		text(375,450," How many yoke do you")
 		write(375,485," like to buy? ",0)
-		text(375,744," Bill so far: $money")
 		break;
 		
 		
 		case 2:
 		instance_create_depth(375,170,1,oMattBanner)
 		
-		text(375,240," I reccomend you take at least")
-		text(375,275," yada yada words about food")
-		text(375,310," 200 pounds per person in base game")
-		text(375,345," 20 cents a pound")
-		text(375,380," Numbers to be changed in balance changes")
+		text(375,240," Food's a bit scarce these days,")
+		text(375,275," So the best I can offer you is")
+		text(375,310," a dollar per pound, with a limit")
+		text(375,345," of 50 pounds max. I have to feed")
+		text(375,380," myself, after all.")
 		
 		text(375,450," How many pounds of food do you")
 		write(375,485," like to buy? ",0)
-		text(375,744," Bill so far: $money")
 		break;
 		
 		
@@ -117,7 +152,6 @@ if global.goto != 0 {
 		
 		text(375,450," How many sets of clothes do you")
 		write(375,485," like to buy? ",0)
-		text(375,744," Bill so far: $money")
 		break;
 		
 		
@@ -132,7 +166,6 @@ if global.goto != 0 {
 		
 		text(375,450," How many boxes of ammo do you")
 		write(375,485," like to buy? ",0)
-		text(375,744," Bill so far: $money")
 		break;
 		
 		
@@ -147,7 +180,6 @@ if global.goto != 0 {
 		
 		text(375,450," How many pounds of food do you")
 		write(375,485," like to buy? ",0)
-		text(375,744," Bill so far: $money")
 		break;
 	}
 	

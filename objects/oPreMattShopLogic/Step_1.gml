@@ -6,14 +6,14 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		case 0:								//Main menu starting screen
 		switch global.txtinput {
 			case 1:
-			global.money = 800
+			global.money = 1600
 			global.job = "b"
 			screenwipe(250,135,12,2)
 			break;
 	
 	
 			case 2:
-			global.money = 600
+			global.money = 800
 			global.job = "c"
 			screenwipe(250,135,12,2)
 			break;
