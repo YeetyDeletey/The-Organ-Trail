@@ -16,7 +16,9 @@ global.oxen = 0
 global.food = 0
 global.clothing = 0
 global.ammo = 0
-global.spareparts = 0
+global.wheels = 0
+global.axles = 0
+global.tongues = 0
 
 
 //custom stats

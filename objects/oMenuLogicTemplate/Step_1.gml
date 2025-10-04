@@ -1,6 +1,6 @@
 
 
-
+//if should be a number don't forget to add global.txtinput != "" to both sides
 if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick = true and mouse_check_button_pressed(mb_left) and global.trans = false {
 	switch global.menu {
 		//global.menu being 0 means its the base screen

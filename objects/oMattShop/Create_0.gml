@@ -9,6 +9,8 @@ sparespent = 0
 bill = 0
 
 moneylen = string_length(string(global.money))
+templimit = 0
+tempmoney = 0
 
 instance_create_depth(375,30,1,oMattBanner)
 text(375,65,"  Matt's General Store")

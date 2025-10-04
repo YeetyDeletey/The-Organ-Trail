@@ -1,2 +1,2 @@
 
-show_debug_message(global.menu)
+//show_debug_message("|" + string(global.menu) + "|")

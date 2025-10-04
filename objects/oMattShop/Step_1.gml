@@ -1,78 +1,70 @@
 
 
 
-if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick = true and mouse_check_button_pressed(mb_left) and global.trans = false and global.txtinput != "" {
+if keyboard_check_pressed(vk_enter) and global.trans = false and global.txtinput != "" or global.canclick = true and mouse_check_button_pressed(mb_left) and global.trans = false and global.txtinput != "" {
 	switch global.menu {
-		//global.menu being 0 means its the base screen
-		//you only get off it after a screenwipe
 		case 0.1:								//Main menu starting screen
-		switch global.txtinput {
-							//txtinput is whatever the player inputted
-							//last num of screenwipe sets global.goto to itself
-							//when global.goto gets set to anything it does new stuff
-							//(creating new text)
-			case 1:
-			screenwipe(375,170,16,1)
-			break;
-	
-	
-			case 2:
-			screenwipe(375,170,16,2)
-			break;
-	
-	
-			case 3:
-			screenwipe(375,170,16,3)
-			break;
-	
-	
-			case 4:
-			screenwipe(375,170,16,4)
-			break;
-	
-			
-			case 5:
-			screenwipe(375,170,16,5)
-			break;
-			
-			
-			case 6:
-			screenwipe(375,170,16,6)
-			break;
-			
-			
-			default:
-			break;
-		}
+		screenwipe(375,170,16,real(global.txtinput))
 		break;
 		
-		//when not on the main screen, it is assumed that you're 
-		//clicking through multiple text boxes
+		
+		case 5:
+		if (real(global.txtinput) <= 100) and global.money - (oxenspent + real(global.txtinput)*10 + foodspent + clothingspent + ammospent + sparespent) >= 0 {
+			sparespent += 10 * real(global.txtinput)
+			global.wheels = real(global.txtinput)
+			global.goto = 5.1}
+		break;
+		
+		
+		case 5.1:
+		if (real(global.txtinput) <= 100) and global.money - (oxenspent + real(global.txtinput)*10 + foodspent + clothingspent + ammospent + sparespent) >= 0 {
+			sparespent += 10 * real(global.txtinput)
+			global.axles = real(global.txtinput)
+			global.goto = 5.2}
+		break;
+		
+		
+		case 5.2:
+		if (real(global.txtinput) <= 100) and global.money - (oxenspent + real(global.txtinput)*10 + foodspent + clothingspent + ammospent + sparespent) >= 0 {
+			sparespent += 10 * real(global.txtinput)
+			global.tongues = real(global.txtinput)
+			screenwipe(375,170,17,0.1)
+			bill = oxenspent + foodspent + clothingspent + ammospent + sparespent
+			tempmoney = global.money - bill}
+		break;
+		
+		
 		default:
-		switch global.menu {
+		switch global.menu {	//extra switch statement added so everything here does the stuff below before the break
 			case 1:
-			oxenspent = 40*real(global.txtinput)
+			if (real(global.txtinput) <= 3) and global.money - (real(global.txtinput)*40 + foodspent + clothingspent + ammospent + sparespent) >= 0 {
+				oxenspent = 40*real(global.txtinput)}
 			break;
 			
 			case 2:
-			foodspent = 1*real(global.txtinput)
+			if (real(global.txtinput) <= 50) and global.money - (oxenspent + real(global.txtinput) + clothingspent + ammospent + sparespent) >= 0 {
+				foodspent = 1*real(global.txtinput)}
 			break;
 			
 			case 3:
-			clothingspent = 10*real(global.txtinput)
+			if (real(global.txtinput) <= 100) and global.money - (oxenspent + foodspent + real(global.txtinput)*10 + ammospent + sparespent) >= 0 {
+				clothingspent = 10*real(global.txtinput)}
 			break;
 			
 			case 4:
-			ammospent = 2*real(global.txtinput)
+			if (real(global.txtinput) <= 3) and global.money - (oxenspent + foodspent + clothingspent + real(global.txtinput)*20 + sparespent) >= 0 {
+				ammospent = 20*real(global.txtinput)}
 			break;
 			
-			case 5:
-			sparespent = 10*real(global.txtinput)
+			case 5:	//shouldn't happen
+			if (real(global.txtinput) <= 100) and global.money - (real(global.txtinput)*40 + foodspent + clothingspent + ammospent + sparespent) >= 0 {
+				sparespent = 10*real(global.txtinput)}
 			break;
 		}
+		
+		screenwipe(375,170,17,0.1)
 		bill = oxenspent + foodspent + clothingspent + ammospent + sparespent
 		tempmoney = global.money - bill
-		screenwipe(375,170,18,0.1)
 		break;
 	}
 }
@@ -81,6 +73,7 @@ if global.goto != 0 {
 	switch global.goto {
 		//this is the code that actually adds new stuff to the screen
 		case 0.1:
+		templimit = 6
 		text(375,170,"            Date")
 		instance_create_depth(375,205,1,oMattBanner)
 		txt = ""; for (i = 0; i < (4-string_length(string(oxenspent)));i++) {txt += " "}; 
@@ -116,14 +109,19 @@ if global.goto != 0 {
 		
 		
 		case 1:
+		templimit = 3
 		instance_create_depth(375,170,1,oMattBanner)
 		
-		text(375,310," There are 2 oxen in a yoke!")
-		text(375,345," I reccomend at least 3 yoke.")
+		text(375,240," There are 2 oxen in a yoke!")
+		text(375,275," I'd normally reccomend at least")
+		text(375,310," 3 yoke, but stock is running low")
+		text(375,345," so 3 is the most I can provide.")
 		text(375,380," I charge $40 a yoke.")
 		
 		text(375,450," How many yoke do you")
 		write(375,485," like to buy? ",0)
+		
+		text(375,730," Bill so far: $" + string(bill) + ".00")
 		break;
 		
 		
@@ -138,6 +136,8 @@ if global.goto != 0 {
 		
 		text(375,450," How many pounds of food do you")
 		write(375,485," like to buy? ",0)
+		
+		text(375,730," Bill so far: $" + string(bill) + ".00")
 		break;
 		
 		
@@ -145,13 +145,15 @@ if global.goto != 0 {
 		instance_create_depth(375,170,1,oMattBanner)
 		
 		text(375,240," You'll need warm clothing in")
-		text(375,275," yada yada words about clothing")
-		text(375,310," 2 sets per person in base game")
-		text(375,345," 10 dollars a set")
-		text(375,380," Numbers to be changed in balance changes")
+		text(375,275," the mountains. I reccomend")
+		text(375,310," taking at least 2 sets of ")
+		text(375,345," clothes per person. Each ")
+		text(375,380," set is $10.00")
 		
 		text(375,450," How many sets of clothes do you")
 		write(375,485," like to buy? ",0)
+		
+		text(375,730," Bill so far: $" + string(bill) + ".00")
 		break;
 		
 		
@@ -159,27 +161,55 @@ if global.goto != 0 {
 		instance_create_depth(375,170,1,oMattBanner)
 		
 		text(375,240," I sell ammunition in boxes")
-		text(375,275," yada yada words about ammo")
-		text(375,310," 20 bullets a box")
-		text(375,345," 2 dollars a box")
-		text(375,380," Numbers to be changed in balance changes")
+		text(375,275," of 20 bullets. Due to the")
+		text(375,310," current situation, each box")
+		text(375,345," is $20.00, and you can buy")
+		text(375,380," 3 boxes at most.")
 		
 		text(375,450," How many boxes of ammo do you")
 		write(375,485," like to buy? ",0)
+		
+		text(375,730," Bill so far: $" + string(bill) + ".00")
 		break;
 		
 		
 		case 5:
 		instance_create_depth(375,170,1,oMattBanner)
 		
-		text(375,240," Oh god this has 3 subactions in ")
-		text(375,275," this menu")
-		text(375,310," 10$ each, wagon wheels, axles,")
-		text(375,345," and tongues")
-		text(375,380," Numbers to be changed in balance changes")
+		text(375,240," It's a good idea to have a ")
+		text(375,275," few spare parts for your ")
+		text(375,310," wagon. Here are the prices:")
 		
-		text(375,450," How many pounds of food do you")
-		write(375,485," like to buy? ",0)
+		text(375,380," wagon wheel  - $10.00 each")
+		text(375,415," wagon axle   - $10.00 each")
+		text(375,450," wagon tongue - $10.00 each")
+		
+		write(375,520," How many wagon wheels? ",0)
+		
+		text(375,730," Bill so far: $" + string(bill) + ".00")
+		sparespent = 0
+		break;
+		
+		
+		case 5.1:
+		instance_create_depth(375,520,1,oScreenwipebar)
+		write(375,520," How many wagon axles? ",0)
+		break;
+		
+		
+		case 5.2:
+		instance_create_depth(375,520,1,oScreenwipebar)
+		write(375,520," How many wagon tongues? ",0)
+		break;
+			
+			
+		case 6:		//leave screen
+		global.oxen = oxenspent / 40
+		global.food = foodspent
+		global.clothing = clothingspent / 10
+		global.ammo = ammospent
+		
+		room_goto(rTravelScreen)
 		break;
 	}
 	
@@ -194,7 +224,6 @@ if global.goto != 0 {
 
 /*
 stuff still to be added to this menu:
-make money actually show the vsrisble it shjoul;d
-make each thing change the appropriate variable
+do work on templimit and <= checks
 
 
