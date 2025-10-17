@@ -209,7 +209,7 @@ if global.goto != 0 {
 		global.clothing = clothingspent / 10
 		global.ammo = ammospent
 		
-		room_goto(rTravelScreen)
+		room_goto(rThinkingScreen)
 		break;
 	}
 	

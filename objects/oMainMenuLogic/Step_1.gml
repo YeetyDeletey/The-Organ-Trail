@@ -18,7 +18,16 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			global.menu = 0
 			global.goto = 0
 			global.trans = false
-			room_goto(rMattShop)
+			global.job = "c"
+			global.wheels = 2
+			global.axles = 2
+			global.tongues = 2
+			global.oxen = 2
+			global.food = 50
+			global.clothing = 5
+			global.ammo = 60
+			global.money = 500
+			room_goto(rThinkingScreen)
 			break;
 	
 	

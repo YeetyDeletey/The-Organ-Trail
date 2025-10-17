@@ -1,5 +1,6 @@
 //Set global variables
 global.pressstart = font_add("PressStart2P-Regular.ttf",20,false,false,32,128)
+draw_set_color(c_white)
 
 //menu stuff
 global.menu = 0

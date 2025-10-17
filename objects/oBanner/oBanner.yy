@@ -8,8 +8,8 @@
   "name":"oBanner",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu Visuals",
-    "path":"folders/Objects/Menu Visuals.yy",
+    "name":"Pirated sprites",
+    "path":"folders/Objects/Menu Visuals/Pirated sprites.yy",
   },
   "parentObjectId":null,
   "persistent":false,

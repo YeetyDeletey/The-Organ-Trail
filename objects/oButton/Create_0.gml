@@ -9,6 +9,5 @@ image_xscale = 908
 
 
 draw_set_font(global.pressstart)
-draw_set_color(c_white)
 
 candie = false

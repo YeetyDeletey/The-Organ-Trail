@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oLogo",
-  "eventList":[],
+  "%Name":"oSquare",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oLogo",
+  "name":"oSquare",
   "overriddenProperties":[],
   "parent":{
-    "name":"Pirated sprites",
-    "path":"folders/Objects/Menu Visuals/Pirated sprites.yy",
+    "name":"Menu Visuals",
+    "path":"folders/Objects/Menu Visuals.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sLogo",
-    "path":"sprites/sLogo/sLogo.yy",
+    "name":"sWhite",
+    "path":"sprites/sWhite/sWhite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

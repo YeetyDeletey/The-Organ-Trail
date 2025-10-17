@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oLogo",
+  "%Name":"oIndependence",
   "eventList":[],
   "managed":true,
-  "name":"oLogo",
+  "name":"oIndependence",
   "overriddenProperties":[],
   "parent":{
     "name":"Pirated sprites",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sLogo",
-    "path":"sprites/sLogo/sLogo.yy",
+    "name":"Independence",
+    "path":"sprites/Independence/Independence.yy",
   },
   "spriteMaskId":null,
   "visible":true,
