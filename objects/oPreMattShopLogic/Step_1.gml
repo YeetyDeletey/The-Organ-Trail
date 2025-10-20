@@ -136,6 +136,13 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		}
 		else if global.txtinput != "" {
 			global.month = 2 + int64(global.txtinput)
+			switch global.month {
+				case 3: global.smonth = "March"; break;
+				case 4: global.smonth = "April"; break;
+				case 5: global.smonth = "May"; break;
+				case 6: global.smonth = "June"; break;
+				case 7: global.smonth = "July"; break;
+			}
 			screenwipe(250,135,13,4)
 		}
 		break;

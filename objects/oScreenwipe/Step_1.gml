@@ -5,6 +5,5 @@ if counter < rows {
 else if counter = rows {
 	global.goto = goto
 	counter += 1
-	show_debug_message(global.goto)
 	instance_destroy()
 }

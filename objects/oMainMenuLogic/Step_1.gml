@@ -27,6 +27,7 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			global.clothing = 5
 			global.ammo = 60
 			global.money = 500
+			global.smonth = "March"
 			room_goto(rThinkingScreen)
 			break;
 	

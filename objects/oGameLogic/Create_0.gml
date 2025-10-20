@@ -26,10 +26,20 @@ global.tongues = 0
 global.job = "" //b,c,f
 
 
-//world stats
-global.month = 0
+//world stats that auto change
+global.month = 3
+global.smonth = ""
 global.day = 1
 global.time = 1
+global.inside = true
+global.weather = "cool"
+global.health = "good"
+
+
+//player settings
+global.pace = "steady"
+global.move = 15
+global.rations = "filling"
 
 
 //party members
@@ -39,10 +49,14 @@ global.party = []
 //Create other necessary objects (persistent)
 instance_create_depth(x,y,1,oCursor)
 instance_create_depth(x,y,1,oGotoroom)
+//it has to load the font before the text so this is necessary trust
 
 
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]
 
 
+made the month work, added global vars for thinking settings
+made the change for inside/outside forts
+made square have delay before dying
 */
