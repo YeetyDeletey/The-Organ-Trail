@@ -15,8 +15,8 @@ text(5,310,"You may:")
 button(5,380,"    1. Continue on trail X",1)
 button(5,415,"    2. Check supplies X",2)
 button(5,450,"    3. Look at map X",3)
-button(5,485,"    4. Change pace X",4)
-button(5,520,"    5. Change food rations X",5)
+button(5,485,"    4. Change pace",4)
+button(5,520,"    5. Change food rations",5)
 button(5,555,"    6. Stop to rest X",6)
 if (global.inside) {
 	button(5,590,"    7. Attempt to trade X",7)	//or hunt when outside

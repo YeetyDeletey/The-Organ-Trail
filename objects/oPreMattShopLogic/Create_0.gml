@@ -1,4 +1,7 @@
 
+menuvisual(704,64,sBanner)
+menuvisual(704,688,sBanner)
+
 text(250,135,"Many kinds of people made the ")
 text(250,170,"trip to Oregon.")
 

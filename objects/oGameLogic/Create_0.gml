@@ -40,6 +40,7 @@ global.health = "good"
 global.pace = "steady"
 global.move = 15
 global.rations = "filling"
+global.eat = 15
 
 
 //party members
@@ -55,8 +56,4 @@ instance_create_depth(x,y,1,oGotoroom)
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]
 
-
-made the month work, added global vars for thinking settings
-made the change for inside/outside forts
-made square have delay before dying
 */

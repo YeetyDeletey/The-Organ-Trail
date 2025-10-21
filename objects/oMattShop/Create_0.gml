@@ -12,6 +12,8 @@ moneylen = string_length(string(global.money))
 templimit = 0
 tempmoney = 0
 
+
+menuvisual(160,448,sMatt)
 instance_create_depth(375,30,1,oMattBanner)
 text(375,65,"  Matt's General Store")
 text(375,100,"  Independence, Missouri")

@@ -194,7 +194,7 @@ if global.goto != 0 {
 		
 		
 		case 2:
-		instance_create_depth(128,-13,-1,oPartyPrep)
+		menuvisual(128,-13,sPartyPrep)
 		instance_create_depth(250,64,1,oScreenwipebar,)
 		instance_create_depth(250,688,1,oScreenwipebar,)
 		
@@ -311,8 +311,8 @@ if global.goto != 0 {
 		case 3:
 		instance_create_depth(128,-13,1,oScreenwipebar)
 		instance_create_depth(250,744,1,oScreenwipebar)
-		instance_create_depth(704,64,1,oBanner)
-		instance_create_depth(704,688,1,oBanner)
+		menuvisual(704,64,sBanner)
+		menuvisual(704,688,sBanner)
 		text(250,135,"It is 1848. Your jumping off ")
 		text(250,170,"place for Oregon is Independence,")
 		text(250,205,"Missouri. You must decide which ")

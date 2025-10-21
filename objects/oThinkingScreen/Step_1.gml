@@ -14,7 +14,14 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		
 		case 2:
-		
+		instance_create_depth(room_width/2,65,1,oScreenwipebar)
+		instance_create_depth(room_width/2,744,1,oScreenwipebar)
+		instance_create_depth(160,495,1,oScreenwipebar)
+		instance_create_depth(550,460,1,oScreenwipebar)
+		instance_create_depth(900,480,1,oScreenwipebar)
+		instance_create_depth(60,65,1,oScreenwipebar)
+		instance_create_depth(110,280,1,oScreenwipebar)
+		screenwipe(250,135,8,0.1)
 		break;
 		
 		
@@ -24,7 +31,6 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		
 		case 4:
-		show_debug_message("E")
 		switch global.txtinput {
 			case 1:
 			global.pace = "steady"
@@ -70,7 +76,27 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		
 		case 5:
-		
+		instance_create_depth(room_width/2,135,1,oScreenwipebar)
+		instance_create_depth(room_width/2,170,1,oScreenwipebar)
+		instance_create_depth(room_width/2,64,1,oScreenwipebar)
+		instance_create_depth(room_width/2,688,1,oScreenwipebar)
+		screenwipe(250,240,11,0.1)
+		switch global.txtinput {
+			case 1:
+			global.rations = "filling"
+			global.eat = 15
+			break;
+			
+			case 2:
+			global.rations = "meager"
+			global.eat = 10
+			break;
+			
+			case 3:
+			global.rations = "bare bones"
+			global.eat = 5
+			break;
+		}
 		break;
 		
 		
@@ -109,7 +135,23 @@ if global.goto != 0 {
 		
 		
 		case 2:	//supplies
+		centertext(65,"Your supplies")
 		
+		text(250,135,"       oxen               0")
+		text(250,170,"       sets of clothing   0")
+		text(250,205,"       bullets            0")
+		text(250,240,"       wagon wheels       0")
+		text(250,275,"       wagon axles        0")
+		text(250,310,"       wagon tongues      0")
+		text(250,345,"       pounds of food     0")
+		text(250,380,"       money left         0")
+		
+		centertext(744,"Press ENTER or click to continue")
+		menuvisual(60,65,sFood)
+		menuvisual(110,280,sSpareparts)
+		menuvisual(160,495,sOxen)
+		menuvisual(550,460,sClothing)
+		menuvisual(900,480,sGun)
 		break;
 		
 		
@@ -119,8 +161,8 @@ if global.goto != 0 {
 		
 		
 		case 4:	//pace
-		instance_create_depth(704,64,1,oBanner)
-		instance_create_depth(704,688,1,oBanner)
+		menuvisual(704,64,sBanner)
+		menuvisual(704,688,sBanner)
 		
 		centertext(135,"Change pace")
 		centertext(170,"(Currently \"" + global.pace + "\")")
@@ -156,7 +198,21 @@ if global.goto != 0 {
 		
 		
 		case 5:	//food
+		menuvisual(704,64,sBanner)
+		menuvisual(704,688,sBanner)
 		
+		centertext(135,"Change rations")
+		centertext(170,"(Currently \"" + global.rations + "\")")
+		
+		text(250,240,"The amount of food the people in")
+		text(250,275,"your party eat each day can")
+		text(250,310,"change. These amounts are:")
+		
+		button(250,380,"  1. Filling - meals are large\n     and generous.",1,2)
+		button(250,450,"  2. Meager - meals are small,\n     but adequate.",2,2)
+		button(250,520,"  3. Bare bones - meals are very\n     small; everyone stays hungry.",3,2)
+		
+		write(250,590,"What is your choice? ",3)
 		break;
 		
 		
@@ -205,8 +261,8 @@ if global.goto != 0 {
 		button(5,380,"    1. Continue on trail X",1)
 		button(5,415,"    2. Check supplies X",2)
 		button(5,450,"    3. Look at map X",3)
-		button(5,485,"    4. Change pace X",4)
-		button(5,520,"    5. Change food rations X",5)
+		button(5,485,"    4. Change pace",4)
+		button(5,520,"    5. Change food rations",5)
 		button(5,555,"    6. Stop to rest X",6)
 		if (global.inside) {
 			button(5,590,"    7. Attempt to trade X",7)	//or hunt when outside

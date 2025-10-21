@@ -1,4 +1,5 @@
-
+menuvisual(704,120,sLogo)
+menuvisual(704,656,sBanner)
 
 text(250,240,"You may:")
 button(250,310,"  1. Travel the trail",1)
