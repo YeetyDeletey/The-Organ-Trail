@@ -130,7 +130,7 @@ if global.goto != 0 {
 	switch global.goto {
 		//this is the code that actually adds new stuff to the screen
 		case 1:	//continue
-		
+		room_goto(rTrailScreen)
 		break;
 		
 		
@@ -249,7 +249,7 @@ if global.goto != 0 {
 		centertext(65,global.smonth + " 1, 1848")
 
 
-		Square(0,135,1408,4)
+		square(0,135,1408,4)
 
 		btext(5,135," Weather: " + global.weather)
 		btext(5,170," Health: " + global.health)
@@ -258,7 +258,7 @@ if global.goto != 0 {
 
 		text(5,310,"You may:")
 
-		button(5,380,"    1. Continue on trail X",1)
+		button(5,380,"    1. Continue on trail",1)
 		button(5,415,"    2. Check supplies X",2)
 		button(5,450,"    3. Look at map X",3)
 		button(5,485,"    4. Change pace",4)

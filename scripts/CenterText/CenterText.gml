@@ -4,5 +4,5 @@
 function centertext(ey,t) {
 	//ey is y
 	//t is text within
-	instance_create_depth(room_width/2,ey,1,oCenterText,{tex:t})
+	var obj = instance_create_depth(room_width/2,ey,1,oCenterText,{tex:t})
 }

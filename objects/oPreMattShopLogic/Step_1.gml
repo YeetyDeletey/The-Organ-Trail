@@ -195,8 +195,8 @@ if global.goto != 0 {
 		
 		case 2:
 		menuvisual(128,-13,sPartyPrep)
-		instance_create_depth(250,64,1,oScreenwipebar,)
-		instance_create_depth(250,688,1,oScreenwipebar,)
+		instance_create_depth(250,64,1,oScreenwipebar)
+		instance_create_depth(250,688,1,oScreenwipebar)
 		
 		text(250,485,"What is the first name of the")
 		write(250,520,"Wagon leader? ","w")

@@ -30,7 +30,8 @@ if keyboard_check_pressed(vk_enter) and global.trans = false and global.txtinput
 			global.tongues = real(global.txtinput)
 			screenwipe(375,170,17,0.1)
 			bill = oxenspent + foodspent + clothingspent + ammospent + sparespent
-			tempmoney = global.money - bill}
+			tempmoney = global.money - bill
+			instance_create_depth(900,555,1,oScreenwipebar)}
 		break;
 		
 		
@@ -63,6 +64,7 @@ if keyboard_check_pressed(vk_enter) and global.trans = false and global.txtinput
 		}
 		
 		screenwipe(375,170,17,0.1)
+		instance_create_depth(865,510,1,oScreenwipebar)
 		bill = oxenspent + foodspent + clothingspent + ammospent + sparespent
 		tempmoney = global.money - bill
 		break;
@@ -122,6 +124,7 @@ if global.goto != 0 {
 		write(375,485," like to buy? ",0)
 		
 		text(375,730," Bill so far: $" + string(bill) + ".00")
+		menuvisual(865,510,sOxen)
 		break;
 		
 		
@@ -138,6 +141,7 @@ if global.goto != 0 {
 		write(375,485," like to buy? ",0)
 		
 		text(375,730," Bill so far: $" + string(bill) + ".00")
+		menuvisual(865,510,sFood)
 		break;
 		
 		
@@ -154,6 +158,7 @@ if global.goto != 0 {
 		write(375,485," like to buy? ",0)
 		
 		text(375,730," Bill so far: $" + string(bill) + ".00")
+		menuvisual(865,510,sClothing)
 		break;
 		
 		
@@ -170,6 +175,7 @@ if global.goto != 0 {
 		write(375,485," like to buy? ",0)
 		
 		text(375,730," Bill so far: $" + string(bill) + ".00")
+		menuvisual(865,510,sGun)
 		break;
 		
 		
@@ -187,6 +193,7 @@ if global.goto != 0 {
 		write(375,520," How many wagon wheels? ",0)
 		
 		text(375,730," Bill so far: $" + string(bill) + ".00")
+		menuvisual(900,555,sSpareparts)
 		sparespent = 0
 		break;
 		

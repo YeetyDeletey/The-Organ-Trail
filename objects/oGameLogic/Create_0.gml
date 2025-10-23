@@ -7,7 +7,6 @@ global.menu = 0
 global.goto = 0
 global.trans = false
 global.canclick = false
-
 global.txtinput = ""
 
 
@@ -27,8 +26,9 @@ global.job = "" //b,c,f
 
 
 //world stats that auto change
+global.year = 1848
 global.month = 3
-global.smonth = ""
+global.smonth = "March"
 global.day = 1
 global.time = 1
 global.inside = true
@@ -56,4 +56,7 @@ instance_create_depth(x,y,1,oGotoroom)
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]
 
+fixed a bunch of compiler errors and warnings
+added images to matt shop
+prepped trailscreen
 */
