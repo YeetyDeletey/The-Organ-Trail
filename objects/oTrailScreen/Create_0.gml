@@ -10,6 +10,6 @@ btext(5,555,"                     Date: " + global.smonth + " " + string(global.
 btext(5,590,"                  Weather: " + global.weather)
 btext(5,625,"                   Health: " + global.health)
 btext(5,660,"                     Food: " + string(global.food) + " pounds")
-btext(5,695,"            Next landmark: ")
-btext(5,730,"           Miles traveled: ")
+btext(5,695,"            Next landmark: " + string(global.distancetolandmark))
+btext(5,730,"           Miles traveled: " + string(global.distance))
 

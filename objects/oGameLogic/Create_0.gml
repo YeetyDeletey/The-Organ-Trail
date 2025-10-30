@@ -34,7 +34,11 @@ global.time = 1
 global.inside = true
 global.weather = "cool"
 global.health = "good"
-
+global.distance = 0
+global.destinations = ["Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", 
+						"Fort Laramie", "Independence Rock", "South Pass"] //then from here the path splits
+global.distances = [102, 83, 119, 250, 86, 190, 102]
+global.distancetolandmark = 102
 
 //player settings
 global.pace = "steady"
@@ -56,7 +60,9 @@ instance_create_depth(x,y,1,oGotoroom)
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]
 
-fixed a bunch of compiler errors and warnings
-added images to matt shop
-prepped trailscreen
+started work on nextday function
+made incrementday to deal with months/years
+added stuff about landmarks and distance
+set up random event script format
+
 */

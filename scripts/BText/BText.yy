@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BText",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Making Objects",
+    "path":"folders/Scripts/Making Objects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
