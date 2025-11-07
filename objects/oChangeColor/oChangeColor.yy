@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oGotoroom",
+  "%Name":"oChangeColor",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oGotoroom",
+  "name":"oChangeColor",
   "overriddenProperties":[],
   "parent":{
-    "name":"The load bearing what the frick",
-    "path":"folders/Objects/The load bearing what the frick.yy",
+    "name":"Things to deal with other things",
+    "path":"folders/Objects/Things to deal with other things.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sNothing",
+    "path":"sprites/sNothing/sNothing.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

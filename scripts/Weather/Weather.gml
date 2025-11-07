@@ -6,4 +6,16 @@ function weather(){
 	the location within america
 	previous weather
 	*/
+	switch global.weather {
+		case "cool":
+		global.weather = "snowy"
+		break;
+		case "snowy":
+		global.weather = "hot"
+		break;
+		case "hot":
+		global.weather = "cool"
+		break;
+	}
+	
 }

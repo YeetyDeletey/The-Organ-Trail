@@ -28,4 +28,5 @@ function nextday(){
 	incrementday()										//day tracker
 	
 	weather()											//reroll the weather X
+	instance_create_depth(0,350,1,oChangeColor)
 }

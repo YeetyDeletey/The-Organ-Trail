@@ -1,11 +1,11 @@
 
 //The square above this text needs to be able to change colors based on weather
 //Its the ground so maybe more as well too
-square(0,365,room_width,3)
+instance_create_depth(0,347.5,1,oSolidSquare,{wid:room_width,hei:4,color:"g"})
 
 centertext(500,"Press ENTER to size up the situation")
 
-square(0,555,room_width,6)
+instance_create_depth(0,537.5,2,oSolidSquare,{wid:room_width,hei:7,color:"w"})
 btext(5,555,"                     Date: " + global.smonth + " " + string(global.day) + ", " + string(global.year))
 btext(5,590,"                  Weather: " + global.weather)
 btext(5,625,"                   Health: " + global.health)

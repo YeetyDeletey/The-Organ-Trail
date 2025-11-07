@@ -259,7 +259,7 @@ if global.goto != 0 {
 		text(5,310,"You may:")
 
 		button(5,380,"    1. Continue on trail",1)
-		button(5,415,"    2. Check supplies X",2)
+		button(5,415,"    2. Check supplies",2)
 		button(5,450,"    3. Look at map X",3)
 		button(5,485,"    4. Change pace",4)
 		button(5,520,"    5. Change food rations",5)

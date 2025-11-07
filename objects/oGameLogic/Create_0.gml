@@ -60,9 +60,7 @@ instance_create_depth(x,y,1,oGotoroom)
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]
 
-started work on nextday function
-made incrementday to deal with months/years
-added stuff about landmarks and distance
-set up random event script format
 
+made the trail screen square better
+made it change color and not die
 */

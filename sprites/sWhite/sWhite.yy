@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Other stuff idk",
-    "path":"folders/Sprites/Other stuff idk.yy",
+    "name":"Weather",
+    "path":"folders/Sprites/Colors/Weather.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
