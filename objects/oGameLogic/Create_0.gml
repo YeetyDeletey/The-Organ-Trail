@@ -1,6 +1,6 @@
 //Set global variables
 global.pressstart = font_add("PressStart2P-Regular.ttf",20,false,false,32,128)
-draw_set_color(c_white)
+draw_set_color(c_white)	//font is 35 tall by 26.6 wide
 
 //menu stuff
 global.menu = 0
@@ -32,6 +32,7 @@ global.smonth = "March"
 global.day = 1
 global.time = 1
 global.inside = true
+global.showlandmark = sIndependence
 global.weather = "cool"
 global.health = "good"
 global.distance = 0

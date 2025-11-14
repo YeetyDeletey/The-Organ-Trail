@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Visuals",
-    "path":"folders/Sprites/Visuals.yy",
+    "name":"Small Visuals",
+    "path":"folders/Sprites/Small Visuals.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
