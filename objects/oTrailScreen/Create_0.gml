@@ -15,8 +15,17 @@ btext(5,730,"           Miles traveled: " + string(global.distance))
 
 if global.showlandmark != 0 {
 	menuvisual(683,384,global.showlandmark,-100)
-	global.menu = 0
+	global.menu = 0.1
 } else {
 	global.menu = 1	
 }
 where = [0,0,0]
+
+cmax = 60
+counter = 0
+
+/*Global.menu states:
+0.1: Showing a landmark
+0.2: On a textbox
+1: on the trail, timer ticking down
+.

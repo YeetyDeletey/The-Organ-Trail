@@ -20,6 +20,8 @@ function nextday(){
 		array_delete(global.distances,0,1)
 		global.distancetolandmark = global.distances[0]
 		//then code about displaying/interacting with the landmark
+		global.showlandmark = global.landmarksprites[0]
+		array_delete(global.landmarksprites,0,1)
 	}
 	
 	//if didn't hit a landmark

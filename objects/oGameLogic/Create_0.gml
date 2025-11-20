@@ -40,6 +40,9 @@ global.destinations = ["Kansas River Crossing", "Big Blue River Crossing", "Fort
 						"Fort Laramie", "Independence Rock", "South Pass"] //then from here the path splits
 global.distances = [102, 83, 119, 250, 86, 190, 102]
 global.distancetolandmark = 102
+global.textbox = "From Independence it is 102\nmiles to the Kansas River \ncrossing."
+global.landmarksprites = [sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence]
+//global.landmarkannouncements = []
 
 //player settings
 global.pace = "steady"
@@ -61,7 +64,4 @@ instance_create_depth(x,y,1,oGotoroom)
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]
 
-
-made the trail screen square better
-made it change color and not die
 */
