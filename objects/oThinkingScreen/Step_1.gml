@@ -137,14 +137,14 @@ if global.goto != 0 {
 		case 2:	//supplies
 		centertext(65,"Your supplies")
 		
-		text(250,135,"       oxen               0")
-		text(250,170,"       sets of clothing   0")
-		text(250,205,"       bullets            0")
-		text(250,240,"       wagon wheels       0")
-		text(250,275,"       wagon axles        0")
-		text(250,310,"       wagon tongues      0")
-		text(250,345,"       pounds of food     0")
-		text(250,380,"       money left         0")
+		text(250,135,"       oxen               " + string(global.oxen))
+		text(250,170,"       sets of clothing   " + string(global.clothing))
+		text(250,205,"       bullets            " + string(global.ammo))
+		text(250,240,"       wagon wheels       " + string(global.wheels))
+		text(250,275,"       wagon axles        " + string(global.axles))
+		text(250,310,"       wagon tongues      " + string(global.tongues))
+		text(250,345,"       pounds of food     " + string(global.food))
+		text(250,380,"       money left         " + string(global.money))
 		
 		centertext(744,"Press ENTER or click to continue")
 		menuvisual(60,65,sFood)

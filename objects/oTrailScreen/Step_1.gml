@@ -20,10 +20,6 @@ if (global.menu == 1) {		//The timer for when the trail screen is running
 	
 	if (counter == cmax) {
 		nextday()
-		if global.showlandmark != 0 {
-			menuvisual(683,384,global.showlandmark,-100)
-			global.menu = 0.1
-		}
 
 		instance_create_depth(5,555,1,oScreenwipebar)
 		instance_create_depth(5,590,1,oScreenwipebar)
@@ -37,6 +33,16 @@ if (global.menu == 1) {		//The timer for when the trail screen is running
 		btext(5,660,"                     Food: " + string(global.food) + " pounds")
 		btext(5,695,"            Next landmark: " + string(global.distancetolandmark))
 		btext(5,730,"           Miles traveled: " + string(global.distance))
+		
+		if global.showlandmark != 0 {	//check for hit landmark
+			menuvisual(683,384,global.showlandmark,-100)
+			global.goto = 0.1
+		} else {						//deal with events
+			if (global.textbox != "") {
+				global.goto = 0.2
+			}
+		}
+		
 		counter = 0
 	}
 }
@@ -51,4 +57,3 @@ if (global.goto != 0) {
 	global.goto = 0
 	global.trans = false
 }
-//show_debug_message(global.goto)

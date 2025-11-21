@@ -39,5 +39,6 @@ function textbox(){
 
 	instance_create_depth(ex,347.5,2,oTextBox,{wid:wid,hei:hei})
 	
+	global.textbox = ""
 	return [ex+13.3,365,hei];
 }

@@ -19,13 +19,16 @@ function nextday(){
 		array_delete(global.destinations,0,1)
 		array_delete(global.distances,0,1)
 		global.distancetolandmark = global.distances[0]
-		//then code about displaying/interacting with the landmark
+		
 		global.showlandmark = global.landmarksprites[0]
 		array_delete(global.landmarksprites,0,1)
-	}
-	
-	//if didn't hit a landmark
-	randomevent()										//random event X
+		global.textbox = global.landmarkannouncements[0]
+		//show_debug_message(global.textbox)
+		array_delete(global.landmarkannouncements,0,1)
+		global.inside = true
+	} else {						//if didn't hit a landmark
+		global.inside = false
+		randomevent()}									//random event X
 	
 	incrementday()										//day tracker
 	

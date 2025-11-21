@@ -42,7 +42,11 @@ global.distances = [102, 83, 119, 250, 86, 190, 102]
 global.distancetolandmark = 102
 global.textbox = "From Independence it is 102\nmiles to the Kansas River \ncrossing."
 global.landmarksprites = [sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence]
-//global.landmarkannouncements = []
+global.landmarkannouncements = ["From Kansas River Crossing\nit is 83 miles to the Big\nBlue River Crossing",
+"wow you're going to Fort\nKearney now thats crazy",
+"On to chimney rock",
+"Fort Laramie",
+"hey this is Independence\nRock thats pretty cool"]
 
 //player settings
 global.pace = "steady"

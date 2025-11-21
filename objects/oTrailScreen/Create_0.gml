@@ -1,7 +1,9 @@
 
 //The square above this text needs to be able to change colors based on weather
 //Its the ground so maybe more as well too
-instance_create_depth(0,347.5,10,oSolidSquare,{wid:room_width,hei:4,color:"g"})
+menuvisual(0,0,sTopOfTrailScreen)
+menuvisual(800,200,sWagon)
+instance_create_depth(0,347.5,10,oSolidSquare,{wid:room_width,hei:4})
 
 centertext(500,"Press ENTER to size up the situation")
 
@@ -28,4 +30,3 @@ counter = 0
 0.1: Showing a landmark
 0.2: On a textbox
 1: on the trail, timer ticking down
-.

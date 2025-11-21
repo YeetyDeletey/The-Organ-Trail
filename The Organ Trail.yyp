@@ -110,6 +110,8 @@
     {"id":{"name":"sPartyPrep","path":"sprites/sPartyPrep/sPartyPrep.yy",},},
     {"id":{"name":"sSpareparts","path":"sprites/sSpareparts/sSpareparts.yy",},},
     {"id":{"name":"sTan","path":"sprites/sTan/sTan.yy",},},
+    {"id":{"name":"sTopOfTrailScreen","path":"sprites/sTopOfTrailScreen/sTopOfTrailScreen.yy",},},
+    {"id":{"name":"sWagon","path":"sprites/sWagon/sWagon.yy",},},
     {"id":{"name":"sWhite","path":"sprites/sWhite/sWhite.yy",},},
   ],
   "resourceType":"GMProject",
