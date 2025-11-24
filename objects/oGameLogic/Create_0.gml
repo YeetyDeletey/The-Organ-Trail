@@ -68,4 +68,6 @@ instance_create_depth(x,y,1,oGotoroom)
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]
 
+Set up the hunting screen base logic object, 
+some sprites, player movement
 */

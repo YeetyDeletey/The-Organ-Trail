@@ -225,7 +225,7 @@ if global.goto != 0 {
 		if (global.inside) {//trade
 			
 		} else {	//hunt
-			
+			room_goto(rHunting)
 		}
 		break;
 		
@@ -282,7 +282,6 @@ if global.goto != 0 {
 	global.menu = global.goto
 	global.goto = 0
 	global.trans = false
-	show_debug_message(global.menu)
 }
 
 

@@ -8,8 +8,8 @@
   "name":"oCursor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Persistent stuff",
-    "path":"folders/Objects/Persistent stuff.yy",
+    "name":"Player stuff",
+    "path":"folders/Objects/Player stuff.yy",
   },
   "parentObjectId":null,
   "persistent":true,

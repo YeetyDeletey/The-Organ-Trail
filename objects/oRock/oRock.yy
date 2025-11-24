@@ -1,19 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"oGameLogic",
+  "%Name":"oRock",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oGameLogic",
+  "name":"oRock",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player stuff",
-    "path":"folders/Objects/Player stuff.yy",
+    "name":"Hunting Stuff",
+    "path":"folders/Objects/Hunting Stuff.yy",
   },
-  "parentObjectId":null,
-  "persistent":true,
+  "parentObjectId":{
+    "name":"oWall",
+    "path":"objects/oWall/oWall.yy",
+  },
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sRock1",
+    "path":"sprites/sRock1/sRock1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
