@@ -20,6 +20,9 @@ global.wheels = 0
 global.axles = 0
 global.tongues = 0
 
+//hunting stuff
+global.playerx = -1
+global.playery = -1
 
 //custom stats
 global.job = "" //b,c,f
@@ -40,6 +43,7 @@ global.destinations = ["Kansas River Crossing", "Big Blue River Crossing", "Fort
 						"Fort Laramie", "Independence Rock", "South Pass"] //then from here the path splits
 global.distances = [102, 83, 119, 250, 86, 190, 102]
 global.distancetolandmark = 102
+//global.textbox is so that it can be set by random objects at any point in the step without causing problems
 global.textbox = "From Independence it is 102\nmiles to the Kansas River \ncrossing."
 global.landmarksprites = [sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence]
 global.landmarkannouncements = ["From Kansas River Crossing\nit is 83 miles to the Big\nBlue River Crossing",
@@ -64,6 +68,8 @@ instance_create_depth(x,y,1,oCursor)
 instance_create_depth(x,y,1,oGotoroom)
 //it has to load the font before the text so this is necessary trust
 
+
+//randomize()
 
 /*party member setup
 [name, special bonuses, health, hunger, exhaustion, injuries]

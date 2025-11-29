@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oWall",
+  "%Name":"oZombie",
   "eventList":[],
   "managed":true,
-  "name":"oWall",
+  "name":"oZombie",
   "overriddenProperties":[],
   "parent":{
     "name":"Abstract objects",
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sNothing",
-    "path":"sprites/sNothing/sNothing.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

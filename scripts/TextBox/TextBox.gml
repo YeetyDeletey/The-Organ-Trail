@@ -10,10 +10,10 @@ function textbox(){
 	i = 1
 	line = ""
 	go = false
-	while (i < string_length(global.textbox)+1) {
-		if (string_char_at(global.textbox,i) != "\n") {
-			line += string_char_at(global.textbox,i)
-			if (i == string_length(global.textbox)) {go = true}
+	while (i < string_length(string(global.textbox))+1) {
+		if (string_char_at(string(global.textbox),i) != "\n") {
+			line += string_char_at(string(global.textbox),i)
+			if (i == string_length(string(global.textbox))) {go = true}
 		} else {go = true}
 		
 		if (go) {
