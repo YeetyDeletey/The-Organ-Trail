@@ -2,16 +2,15 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function nextday(){
 	
-	global.food -= global.eat							//eat food
+	global.food -= global.eat									//eat food
 	
-	if (global.food < 0) {								//health changes
+	if (global.food < 0) {										//health changes
 		global.food = 0
 		//do something 	if not eating enough
-	} 
-	/*then also do stuff for pace, recovering from bodily harm/illness
-	I feel like there has to be more that I'm forgetting */
+	}
 	
-	travel = global.move + irandom_range(-1,2)			//movement X
+																//movement
+	travel = round((global.move + irandom_range(-1,2)) * (1-(global.time-8)*0.1))
 	global.distance += travel
 	global.distancetolandmark -= travel
 	if (global.distancetolandmark) <= 0 {	//if hit a landmark
@@ -23,15 +22,25 @@ function nextday(){
 		global.showlandmark = global.landmarksprites[0]
 		array_delete(global.landmarksprites,0,1)
 		global.textbox = global.landmarkannouncements[0]
-		//show_debug_message(global.textbox)
 		array_delete(global.landmarkannouncements,0,1)
 		global.inside = true
 	} else {						//if didn't hit a landmark
 		global.inside = false
-		randomevent()}									//random event X
+		//maybe do different events based on time lost hunting?
+		randomevent()											//random event X~
+		
+		if (global.bitten == true) {							//zombie infection X~
+			if (random(10) > 7) {
+				global.textbox = "The person who was bitten\nhas turned into a zombie\nand ruined some supplies \non their way out"
+				global.wheels -= 1
+				global.money -= 13
+				global.bitten = false
+			}
+		}
+	}
 	
-	incrementday()										//day tracker
+	incrementday()												//day tracker
 	
-	weather()											//reroll the weather X
+	weather()													//reroll the weather X~
 	instance_create_depth(0,350,1,oChangeColor)
 }

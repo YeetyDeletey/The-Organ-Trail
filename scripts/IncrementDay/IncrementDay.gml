@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function incrementday(){
 	global.day++
+	global.time = 8
 	nextmonth = false
 	switch global.month {
 		case 1:

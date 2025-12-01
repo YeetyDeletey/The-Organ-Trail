@@ -23,6 +23,7 @@ global.tongues = 0
 //hunting stuff
 global.playerx = -1
 global.playery = -1
+global.bitten = false //VERY TEMPORARY
 
 //custom stats
 global.job = "" //b,c,f
@@ -33,7 +34,7 @@ global.year = 1848
 global.month = 3
 global.smonth = "March"
 global.day = 1
-global.time = 1
+global.time = 8
 global.inside = true
 global.showlandmark = sIndependence
 global.weather = "cool"
@@ -76,4 +77,9 @@ instance_create_depth(x,y,1,oGotoroom)
 
 Set up the hunting screen base logic object, 
 some sprites, player movement
+
+set up player getting nicked/bitten
+added infection to nextday function
+made time pass when hunting, auto kicked out
+made travel less far based on time hunting
 */

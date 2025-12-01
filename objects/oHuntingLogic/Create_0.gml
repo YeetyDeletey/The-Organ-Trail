@@ -10,8 +10,11 @@ instance_create_layer(random(1350),random(750),"Zombies",oWalkZombie)
 
 
 draw_set_font(global.pressstart)
-where = [0,0,0]
 global.menu	= 1
+
+where = [0,0,0]
+counter = 0
+
 /*
 should probably add variables to say what should be created
 when you enter and what type of hunting minigame is happening

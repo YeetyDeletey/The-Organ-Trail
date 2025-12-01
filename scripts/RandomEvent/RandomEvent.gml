@@ -6,7 +6,7 @@ function randomevent(){
 	if (eventoccurs == 1) {	//this is if an event does occur, 2/10 chance
 		event = irandom(99) + 1
 		
-		global.textbox = "Hey this is a random event thats\ncrazy"
+		global.textbox = "Hey this is a random event gain\n15 dollars"
 		global.money += 15
 		
 		switch event {
