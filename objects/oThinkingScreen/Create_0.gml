@@ -1,6 +1,6 @@
 
 centertext(30,"Independence")
-centertext(65,global.smonth + " 1, 1848")
+centertext(65,global.smonth + " " + string(global.day) + ", " + string(global.year))
 
 
 square(0,135,1408,4)

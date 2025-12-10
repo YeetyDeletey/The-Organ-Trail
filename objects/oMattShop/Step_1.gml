@@ -76,7 +76,9 @@ if global.goto != 0 {
 		//this is the code that actually adds new stuff to the screen
 		case 0.1:
 		templimit = 6
-		text(375,170,"            Date")
+		txt = ""; for (i = 0; i < (18-string_length(string(global.smonth)));i++) {txt += " "}; 
+		txt += global.smonth + " 1, 1848"
+		text(375,170,txt)
 		instance_create_depth(375,205,1,oMattBanner)
 		txt = ""; for (i = 0; i < (4-string_length(string(oxenspent)));i++) {txt += " "}; 
 		txt += "$" + string(oxenspent) + ".00"

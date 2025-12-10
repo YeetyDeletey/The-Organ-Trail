@@ -5,6 +5,9 @@ instance_create_layer(704,396,"Player",oPlayer)
 repeat(10) {
 	instance_create_layer(random(1350),random(750),"Terrain",oRock)
 }
+repeat(5) {
+	instance_create_layer(random(1350),random(750),"Terrain",oTree)
+}
 
 instance_create_layer(random(1350),random(750),"Zombies",oWalkZombie)
 

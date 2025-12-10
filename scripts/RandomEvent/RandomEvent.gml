@@ -2,12 +2,17 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function randomevent(){
 	//irandom is 0-n, inclusive
-	eventoccurs = irandom(9) + 1
-	if (eventoccurs == 1) {	//this is if an event does occur, 2/10 chance
+	eventoccurs = random(10)
+	if (eventoccurs > 7) {		//this is if an event does occur, 2/10 chance
 		event = irandom(99) + 1
 		
-		global.textbox = "Hey this is a random event gain\n15 dollars"
-		global.money += 15
+		if (random(10) > 5) {
+			global.textbox = "Random event\ngain 15 dollars"
+			global.money += 15
+		} else {
+			global.textbox = "Random event\nlose 15 dollars"
+			global.money -= 15
+		}
 		
 		switch event {
 			//when an event happens it'll pop up a text box and change some variables

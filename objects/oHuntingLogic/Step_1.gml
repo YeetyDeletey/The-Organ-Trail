@@ -24,5 +24,5 @@ if (counter == 60) {
 	counter = 0
 }
 if (global.time == 18) {
-	room_goto(rTrailScreen)
+	room_goto(rThinkingScreen)
 }

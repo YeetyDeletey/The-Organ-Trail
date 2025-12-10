@@ -6,6 +6,7 @@ function weather(){
 	the location within america
 	previous weather
 	*/
+	/* this one is just a loop that goes through each in order
 	switch global.weather {
 		case "cool":
 		global.weather = "snowy"
@@ -16,6 +17,15 @@ function weather(){
 		case "hot":
 		global.weather = "cool"
 		break;
+	}*/
+	
+	num = random(10)
+	if (num <= 1) {
+		global.weather = "snowy"
+	} else if (num < 2.5) {
+		global.weather = "hot"
+	} else {
+		global.weather = "cool"
 	}
 	
 }

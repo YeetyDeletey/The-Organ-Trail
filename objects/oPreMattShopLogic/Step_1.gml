@@ -204,6 +204,7 @@ if global.goto != 0 {
 		
 		
 		case 2.01:
+		keyboard_string = ""
 		text(250,485,"What are the first names of the ")
 		text(250,520,"four other members in your party?")
 		text(250,555,"1. " + global.party[0][0])
