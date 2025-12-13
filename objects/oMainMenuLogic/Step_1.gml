@@ -28,6 +28,11 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			global.ammo = 60
 			global.money = 500
 			global.smonth = "March"
+			global.party[0].name = "Owen"
+			global.party[1].name = "Jasmine"
+			global.party[2].name = "AdaCancada"
+			global.party[3].name = "LilTony"
+			global.party[4].name = "BigTony"
 			room_goto(rThinkingScreen)
 			break;
 	

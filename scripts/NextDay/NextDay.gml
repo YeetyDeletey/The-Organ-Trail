@@ -29,13 +29,8 @@ function nextday(){
 		//maybe do different events based on time lost hunting?
 		randomevent()											//random event X~
 		
-		if (global.bitten == true) {							//zombie infection X~
-			if (random(10) > 7) {
-				global.textbox = "The person who was bitten\nhas turned into a zombie\nand ruined some supplies \non their way out"
-				global.wheels -= 1
-				global.money -= 13
-				global.bitten = false
-			}
+		repeat(array_length(global.party)) {											//zombie infection
+			
 		}
 	}
 	

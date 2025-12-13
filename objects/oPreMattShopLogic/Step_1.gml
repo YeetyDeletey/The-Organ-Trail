@@ -43,13 +43,19 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		case 2:
 		if global.txtinput != "" {
 			screenwipe(250,485,2,2.01)
-			array_push(global.party, [global.txtinput,[],100,0,0,[]])
+			//array_push(global.party, [global.txtinput,[],100,0,0,[]])
+			global.party[0].name = global.txtinput
 		}
 		break;
 		
 		
 		case 2.05:
 		if global.txtinput = "y" or global.txtinput = "Y" {
+			show_debug_message(global.party[0].name)
+			show_debug_message(global.party[1].name)
+			show_debug_message(global.party[2].name)
+			show_debug_message(global.party[3].name)
+			show_debug_message(global.party[4].name)
 			screenwipe(250,485,9,3)
 		}
 		else if global.txtinput = "n" or global.txtinput = "N" {
@@ -77,10 +83,9 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		case 2.2:
 		if global.txtinput != "" {
-			array_insert(global.party, 0,[global.txtinput,[],100,0,0,[]])
-			array_delete(global.party,1,1)
+			global.party[0].name = global.txtinput
 			instance_create_depth(250,555,1,oScreenwipebar)
-			text(250,555,"1. " + global.party[0][0])
+			text(250,555,"1. " + global.party[0].name)
 			global.goto = 2.06
 		}
 		break;
@@ -88,10 +93,9 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		case 2.3:
 		if global.txtinput != "" {
-			array_insert(global.party, 1,[global.txtinput,[],100,0,0,[]])
-			array_delete(global.party,2,1)
+			global.party[1].name = global.txtinput
 			instance_create_depth(250,590,1,oScreenwipebar)
-			text(250,590,"2. " + global.party[1][0])
+			text(250,590,"2. " + global.party[1].name)
 			global.goto = 2.06
 		}
 		break;
@@ -99,10 +103,9 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		case 2.4:
 		if global.txtinput != "" {
-			array_insert(global.party, 2,[global.txtinput,[],100,0,0,[]])
-			array_delete(global.party,3,1)
+			global.party[2].name = global.txtinput
 			instance_create_depth(250,625,1,oScreenwipebar)
-			text(250,625,"3. " + global.party[2][0])
+			text(250,625,"3. " + global.party[2].name)
 			global.goto = 2.06
 		}
 		break;
@@ -110,10 +113,9 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		case 2.5:
 		if global.txtinput != "" {
-			array_insert(global.party, 3,[global.txtinput,[],100,0,0,[]])
-			array_delete(global.party,4,1)
+			global.party[3].name = global.txtinput
 			instance_create_depth(250,660,1,oScreenwipebar)
-			text(250,660,"4. " + global.party[3][0])
+			text(250,660,"4. " + global.party[3].name)
 			global.goto = 2.06
 		}
 		break;
@@ -121,10 +123,9 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		case 2.6:
 		if global.txtinput != "" {
-			array_insert(global.party, 4,[global.txtinput,[],100,0,0,[]])
-			array_delete(global.party,5,1)
+			global.party[4].name = global.txtinput
 			instance_create_depth(250,695,1,oScreenwipebar)
-			text(250,695,"5. " + global.party[4][0])
+			text(250,695,"5. " + global.party[4].name)
 			global.goto = 2.06
 		}
 		break;
@@ -155,7 +156,8 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		default:
 		if global.txtinput != "" {
-			array_push(global.party, [global.txtinput,[],100,0,0,[]])
+			global.party[num].name = global.txtinput
+			num++
 			global.goto = global.menu + 0.01
 		}
 		break;
@@ -207,7 +209,7 @@ if global.goto != 0 {
 		keyboard_string = ""
 		text(250,485,"What are the first names of the ")
 		text(250,520,"four other members in your party?")
-		text(250,555,"1. " + global.party[0][0])
+		text(250,555,"1. " + global.party[0].name)
 		write(250,590,"2. ","w")
 		text(250,625,"3. ")
 		text(250,660,"4. ")
@@ -217,7 +219,7 @@ if global.goto != 0 {
 		
 		case 2.02:
 		keyboard_string = ""
-		text(250,590,"2. " + global.party[1][0])
+		text(250,590,"2. " + global.party[1].name)
 		write(250,625,"3. ","w")
 		instance_create_depth(250,590,1,oScreenwipebar)		
 		instance_create_depth(250,625,1,oScreenwipebar)
@@ -226,7 +228,7 @@ if global.goto != 0 {
 		
 		case 2.03:
 		keyboard_string = ""
-		text(250,625,"3. " + global.party[2][0])
+		text(250,625,"3. " + global.party[2].name)
 		write(250,660,"4. ","w")
 		instance_create_depth(250,625,1,oScreenwipebar)		
 		instance_create_depth(250,660,1,oScreenwipebar)
@@ -235,7 +237,7 @@ if global.goto != 0 {
 		
 		case 2.04:
 		keyboard_string = ""
-		text(250,660,"4. " + global.party[3][0])
+		text(250,660,"4. " + global.party[3].name)
 		write(250,695,"5. ","w")
 		instance_create_depth(250,660,1,oScreenwipebar)
 		break;
@@ -243,7 +245,7 @@ if global.goto != 0 {
 		
 		case 2.05:
 		keyboard_string = ""
-		text(250,695,"5. " + global.party[4][0])
+		text(250,695,"5. " + global.party[4].name)
 		write(250,730,"Are these names correct? ","y")
 		instance_create_depth(250,695,1,oScreenwipebar)
 		break;

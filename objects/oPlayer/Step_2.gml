@@ -4,7 +4,7 @@ if (place_meeting(x,y,oZombie)) and invin == 0 {
 	if(bite == 30) {
 		invin = maxinvin
 		global.textbox = "You got bitten"
-		global.bitten = true
+		global.party[0].infection += 30
 	}
 } else if (bite > 0) {
 	if (bite < 15) {
@@ -15,7 +15,7 @@ if (place_meeting(x,y,oZombie)) and invin == 0 {
 	} else {
 		global.textbox = "You got bitten"
 		invin = maxinvin
-		global.bitten = true
+		global.party[0].infection += 30
 	}
 	bite = 0
 }

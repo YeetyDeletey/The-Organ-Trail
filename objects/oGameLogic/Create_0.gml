@@ -23,11 +23,9 @@ global.tongues = 0
 //hunting stuff
 global.playerx = -1
 global.playery = -1
-global.bitten = false //VERY TEMPORARY
 
 //custom stats
 global.job = "" //b,c,f
-
 
 //world stats that auto change
 global.year = 1848
@@ -59,9 +57,34 @@ global.move = 15
 global.rations = "filling"
 global.eat = 15
 
+p1 = new person();
+p2 = new person();
+p3 = new person();
+p4 = new person();
+p5 = new person();
 
 //party members
-global.party = []
+person = 
+{
+	hp : 100,
+	hunger : 0,
+	exhaustion : 0,
+	injuries : [],
+	bonuses : [],
+	infection : 0,
+	name : ""
+};
+
+function person () constructor {
+	hp = 100
+	hunger = 0
+	exhaustion = 0
+	injuries = []
+	bonuses = []
+	infection = 0
+	name = ""
+}
+global.party = [p1,p2,p3,p4,p5]
 
 
 //Create other necessary objects (persistent)
@@ -72,14 +95,7 @@ instance_create_depth(x,y,1,oGotoroom)
 
 //randomize()
 
-/*party member setup
-[name, special bonuses, health, hunger, exhaustion, injuries]
+/*
 
-Set up the hunting screen base logic object, 
-some sprites, player movement
-
-set up player getting nicked/bitten
-added infection to nextday function
-made time pass when hunting, auto kicked out
-made travel less far based on time hunting
 */
+

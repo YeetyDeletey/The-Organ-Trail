@@ -16,4 +16,4 @@ button(250,415,"  4. Find out the differences\n     between these choices",4,2)
 write(250,520,"What is your choice? ",4)
 
 
-
+num = 1
