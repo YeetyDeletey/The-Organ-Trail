@@ -6,7 +6,7 @@ centertext(65,global.smonth + " " + string(global.day) + ", " + string(global.ye
 square(0,135,1408,4)
 
 btext(5,135," Weather: " + global.weather)
-btext(5,170," Health: " + global.health)
+btext(5,170," Health: " + global.phealth)
 btext(5,205," Pace: " + global.pace)
 btext(5,240," Rations: " + global.rations)
 
@@ -18,15 +18,13 @@ button(5,450,"    3. Look at map X",3)
 button(5,485,"    4. Change pace",4)
 button(5,520,"    5. Change food rations",5)
 button(5,555,"    6. Stop to rest X",6)
+button(5,590,"    7. Check party status X",7)
 if (global.inside) {
-	button(5,590,"    7. Attempt to trade X",7)	//or hunt when outside
-	button(5,625,"    8. Buy supplies X",8)		//or leave when outside
-	button(5,660,"    9. Leave X",9)			//or nothing when outside
-	write(5,730,"What is your choice? ",9)
+	button(5,625,"    8. Attempt to trade X",8)		//or hunt when outside
 } else {
-	button(5,590,"    7. Attempt to hunt X",7)	//or hunt when outside
-	button(5,625,"    8. Leave X",8)			//or leave when outside
-	write(5,730,"What is your choice? ",8)
+	button(5,625,"    8. Attempt to hunt X",8)		//or trade when inside
 }
+
+write(5,730,"What is your choice? ",8)	
 
 global.menu = 0.1

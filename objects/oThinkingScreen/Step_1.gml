@@ -31,12 +31,12 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		
 		case 4:
+		instance_create_depth(room_width/2,135,1,oScreenwipebar)
+		instance_create_depth(room_width/2,170,1,oScreenwipebar)
 		switch global.txtinput {
 			case 1:
 			global.pace = "steady"
 			global.move = 15
-			instance_create_depth(room_width/2,135,1,oScreenwipebar)
-			instance_create_depth(room_width/2,170,1,oScreenwipebar)
 			instance_create_depth(room_width/2,64,1,oScreenwipebar)
 			instance_create_depth(room_width/2,688,1,oScreenwipebar)
 			screenwipe(250,240,10,0.1)
@@ -45,8 +45,6 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			case 2:
 			global.pace = "strenuous"
 			global.move = 24
-			instance_create_depth(room_width/2,135,1,oScreenwipebar)
-			instance_create_depth(room_width/2,170,1,oScreenwipebar)
 			instance_create_depth(room_width/2,64,1,oScreenwipebar)
 			instance_create_depth(room_width/2,688,1,oScreenwipebar)
 			screenwipe(250,240,10,0.1)
@@ -55,16 +53,12 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			case 3:
 			global.pace = "grueling"
 			global.move = 32
-			instance_create_depth(room_width/2,135,1,oScreenwipebar)
-			instance_create_depth(room_width/2,170,1,oScreenwipebar)
 			instance_create_depth(room_width/2,64,1,oScreenwipebar)
 			instance_create_depth(room_width/2,688,1,oScreenwipebar)
 			screenwipe(250,240,10,0.1)
 			break;
 			
 			case 4:
-			instance_create_depth(room_width/2,135,1,oScreenwipebar)
-			instance_create_depth(room_width/2,170,1,oScreenwipebar)
 			screenwipe(250,240,10,4.01)
 			break;
 		}
@@ -106,7 +100,24 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		
 		case 7:
-		
+			instance_create_depth(room_width/2,64,1,oScreenwipebar)
+			instance_create_depth(room_width/2,688,1,oScreenwipebar)
+			instance_create_depth(room_width/2,744,1,oScreenwipebar)
+			m = 0
+			i = 0
+			repeat(5) {
+				if (array_length(global.party[i].injuries) > m) {m = array_length(global.party[i].injuries)}
+				i++
+			}
+			if (m == 0) {m++}
+			m += 2
+			i = 0
+			repeat (5) {
+				xoffset = 100+(250 * i)
+				yoffset = 300+power(-1,i+1)*150
+				screenwipe(xoffset,yoffset,m,0.1)
+				i++
+			}
 		break;
 		
 		
@@ -221,7 +232,41 @@ if global.goto != 0 {
 		break;
 		
 		
-		case 7:	//trade or hunt
+		case 7:	//check party status
+		menuvisual(704,64,sBanner)
+		menuvisual(704,688,sBanner)
+		
+		i = 0
+		repeat(5) {
+			//10 chars per line
+			xoffset = 100+(250 * i)
+			yoffset = 300+power(-1,i+1)*150
+			
+			text(xoffset,yoffset,global.party[i].name)
+			
+			if (global.party[i].unknown = true) {text(xoffset,yoffset+35,"Unknown")}
+			else if (global.party[i].infection = 0) {text(xoffset,yoffset+35,"Unbitten")}
+			else {text(xoffset,yoffset+35,"Infected")}
+			
+			if (array_length(global.party[i].injuries) == 0) {
+				text(xoffset,yoffset+70,"Uninjured")
+			} else {
+				j = 0
+				repeat(array_length(global.party[i].injuries)) {
+					text(xoffset,yoffset+70+(35*j),global.party[i].injuries[j])
+					j++
+					show_debug_message(j)
+				}
+			}
+			i++
+		}
+		//currently the only thing that changes the total number of lines is number of injuries, 
+		//more code needed here and in removal to change that
+		centertext(744,"Press ENTER or click to continue")
+		break;
+		
+		
+		case 8:	//trade or hunt
 		if (global.inside) {//trade
 			
 		} else {	//hunt
@@ -230,16 +275,7 @@ if global.goto != 0 {
 		break;
 		
 		
-		case 8:	//buy or leave
-		if (global.inside) {//buy
-			
-		} else {	//leave
-			
-		}
-		break;
-		
-		
-		case 9:	//leave
+		case 9:	//as of now shouldn't happen
 		
 		break;
 		
@@ -252,7 +288,7 @@ if global.goto != 0 {
 		square(0,135,1408,4)
 
 		btext(5,135," Weather: " + global.weather)
-		btext(5,170," Health: " + global.health)
+		btext(5,170," Health: " + global.phealth)
 		btext(5,205," Pace: " + global.pace)
 		btext(5,240," Rations: " + global.rations)
 
@@ -264,16 +300,14 @@ if global.goto != 0 {
 		button(5,485,"    4. Change pace",4)
 		button(5,520,"    5. Change food rations",5)
 		button(5,555,"    6. Stop to rest X",6)
+		button(5,590,"    7. Check party status X",7)
 		if (global.inside) {
-			button(5,590,"    7. Attempt to trade X",7)	//or hunt when outside
-			button(5,625,"    8. Buy supplies X",8)		//or leave when outside
-			button(5,660,"    9. Leave X",9)			//or nothing when outside
-			write(5,730,"What is your choice? ",9)
+			button(5,625,"    8. Attempt to trade X",8)		//or hunt when outside
 		} else {
-			button(5,590,"    7. Attempt to hunt X",7)	//or hunt when outside
-			button(5,625,"    8. Leave X",8)			//or leave when outside
-			write(5,730,"What is your choice? ",8)
+			button(5,625,"    8. Attempt to hunt X",8)		//or trade when inside
 		}
+		
+		write(5,730,"What is your choice? ",8)
 		break;
 	}
 	

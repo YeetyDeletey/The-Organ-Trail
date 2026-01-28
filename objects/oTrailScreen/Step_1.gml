@@ -29,7 +29,7 @@ if (global.menu == 1) {		//The timer for when the trail screen is running
 		instance_create_depth(5,730,1,oScreenwipebar)
 		btext(5,555,"                     Date: " + global.smonth + " " + string(global.day) + ", " + string(global.year))
 		btext(5,590,"                  Weather: " + global.weather)
-		btext(5,625,"                   Health: " + global.health)
+		btext(5,625,"                   Health: " + global.phealth)
 		btext(5,660,"                     Food: " + string(global.food) + " pounds")
 		btext(5,695,"            Next landmark: " + string(global.distancetolandmark))
 		btext(5,730,"           Miles traveled: " + string(global.distance))

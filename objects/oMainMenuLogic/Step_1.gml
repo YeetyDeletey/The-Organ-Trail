@@ -29,9 +29,11 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			global.money = 500
 			global.smonth = "March"
 			global.party[0].name = "Owen"
+			global.party[0].injuries = ["Broken leg", "Broken arm", "Dysentery"]
 			global.party[1].name = "Jasmine"
 			global.party[2].name = "AdaCancada"
 			global.party[3].name = "LilTony"
+			global.party[3].infection = 30
 			global.party[4].name = "BigTony"
 			room_goto(rThinkingScreen)
 			break;

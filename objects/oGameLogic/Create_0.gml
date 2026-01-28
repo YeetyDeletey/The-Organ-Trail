@@ -36,7 +36,7 @@ global.time = 8
 global.inside = true
 global.showlandmark = sIndependence
 global.weather = "cool"
-global.health = "good"
+global.phealth = "good"
 global.distance = 0
 global.destinations = ["Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", 
 						"Fort Laramie", "Independence Rock", "South Pass"] //then from here the path splits
@@ -72,6 +72,7 @@ person =
 	injuries : [],
 	bonuses : [],
 	infection : 0,
+	unknown : false,
 	name : ""
 };
 
@@ -82,6 +83,7 @@ function person () constructor {
 	injuries = []
 	bonuses = []
 	infection = 0
+	unknown = false
 	name = ""
 }
 global.party = [p1,p2,p3,p4,p5]
@@ -95,7 +97,4 @@ instance_create_depth(x,y,1,oGotoroom)
 
 //randomize()
 
-/*
-
-*/
 
