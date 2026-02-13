@@ -67,6 +67,11 @@ if global.goto != 0 {
 		text(250,135,"Many kinds of people made the ")
 		text(250,170,"trip to Oregon.")
 		break;
+		
+		
+		case 3:
+		mainscreen()
+		break;
 	}
 	
 	//global.goto stuff is only supposed to activate for 1 frame so

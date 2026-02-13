@@ -38,18 +38,12 @@ global.showlandmark = sIndependence
 global.weather = "cool"
 global.phealth = "good"
 global.distance = 0
-global.destinations = ["Kansas River Crossing", "Big Blue River Crossing", "Fort Kearney", "Chimney Rock", 
-						"Fort Laramie", "Independence Rock", "South Pass"] //then from here the path splits
-global.distances = [102, 83, 118, 250, 86, 190, 102]
 global.distancetolandmark = 102
+global.nextlandmark = "Kansas River Crossing"
 //global.textbox is so that it can be set by random objects at any point in the step without causing problems
 global.textbox = "From Independence it is 102\nmiles to the Kansas River \ncrossing."
-global.landmarksprites = [sKansasRiverCrossing,sBigBlueRiverCrossing,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence]
-global.landmarkannouncements = ["From Kansas River Crossing\nit is 83 miles to the Big\nBlue River Crossing",
-"From the Big Blue River\nCrossing it is 118 miles\nto Fort Kearney",
-"On to chimney rock",
-"Fort Laramie",
-"hey this is Independence\nRock thats pretty cool"]
+
+
 
 //player settings
 global.pace = "steady"
