@@ -8,12 +8,16 @@ instance_create_depth(0,347.5,10,oSolidSquare,{wid:room_width,hei:4})
 centertext(500,"Press ENTER to size up the situation")
 
 instance_create_depth(0,537.5,10,oSolidSquare,{wid:room_width,hei:7,color:"w"})
-btext(5,555,"                     Date: " + global.smonth + " " + string(global.day) + ", " + string(global.year))
-btext(5,590,"                  Weather: " + global.weather)
-btext(5,625,"                   Health: " + global.phealth)
-btext(5,660,"                     Food: " + string(global.food) + " pounds")
-btext(5,695,"            Next landmark: " + string(global.distancetolandmark))
-btext(5,730,"           Miles traveled: " + string(global.distance))
+
+function changingthings() {
+	btext(5,555,"                     Date: " + global.smonth + " " + string(global.day) + ", " + string(global.year))
+	btext(5,590,"                  Weather: " + global.weather)
+	btext(5,625,"                   Health: " + global.phealth)
+	btext(5,660,"                     Food: " + string(global.food) + " pounds")
+	btext(5,695,"            Next landmark: " + string(global.distancetolandmark))
+	btext(5,730,"           Miles traveled: " + string(global.distance))
+}
+changingthings()
 
 if global.showlandmark != 0 {
 	menuvisual(683,384,global.showlandmark,-100)

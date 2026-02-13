@@ -14,16 +14,9 @@ function nextday(){
 	global.distance += travel
 	global.distancetolandmark -= travel
 	if (global.distancetolandmark) <= 0 {	//if hit a landmark
-		global.distance += global.distancetolandmark
-		array_delete(global.destinations,0,1)
-		array_delete(global.distances,0,1)
-		global.distancetolandmark = global.distances[0]
-		
-		global.showlandmark = global.landmarksprites[0]
-		array_delete(global.landmarksprites,0,1)
-		global.textbox = global.landmarkannouncements[0]
-		array_delete(global.landmarkannouncements,0,1)
 		global.inside = true
+		global.distance += global.distancetolandmark
+		changelandmark()
 	} else {						//if didn't hit a landmark
 		global.inside = false
 		//maybe do different events based on time lost hunting?

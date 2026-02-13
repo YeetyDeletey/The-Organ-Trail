@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"IncrementDay",
+  "%Name":"ChangeLandmark",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"IncrementDay",
+  "name":"ChangeLandmark",
   "parent":{
     "name":"Stuff for next day",
     "path":"folders/Scripts/Stuff for next day.yy",
