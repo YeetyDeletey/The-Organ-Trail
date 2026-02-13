@@ -1,8 +1,10 @@
 
-if (global.menu = 1) {
+if (global.menu == 1) {
 	lr = keyboard_check(ord("D")) - keyboard_check(ord("A"))
 	ud = keyboard_check(ord("S")) - keyboard_check(ord("W"))
 
+    shoot = keyboard_check_pressed(vk_space)
+    
 	if (lr != 0) {
 		x += move_speed * lr
 		repeat(move_speed) {
@@ -20,7 +22,11 @@ if (global.menu = 1) {
 			}
 		}
 	}
-
+    
+    if(shoot){
+        instance_create_layer(x, y, "Player", oBoolet)
+    }
+    
 	global.playerx = x
 	global.playery = y
 	
