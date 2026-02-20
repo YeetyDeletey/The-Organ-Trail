@@ -18,6 +18,12 @@ global.menu	= 1
 where = [0,0,0]
 counter = 0
 
+spawn_time = random_range(1, 3)
+
+spawn1 = random_range(0, 800)
+spawn2 = random_range(0 ,1350)
+
+
 /*
 should probably add variables to say what should be created
 when you enter and what type of hunting minigame is happening
