@@ -89,6 +89,6 @@ instance_create_depth(x,y,1,oGotoroom)
 //it has to load the font before the text so this is necessary trust
 
 
-randomize()
+//randomize()
 
 
