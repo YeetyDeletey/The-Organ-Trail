@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"Boolet",
-  "eventList":[],
+  "%Name":"oDeer",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Boolet",
+  "name":"oDeer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player stuff",
-    "path":"folders/Objects/Player stuff.yy",
+    "name":"Animals",
+    "path":"folders/Objects/Hunting Stuff/Animals.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sDeer",
+    "path":"sprites/sDeer/sDeer.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
