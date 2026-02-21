@@ -19,7 +19,7 @@ function mainscreen() {
 	button(5,520,"    5. Change food rations",5)
 	button(5,555,"    6. Stop to rest X",6)
 	button(5,590,"    7. Check party status X~",7)
-	if (global.inside) {
+	if (global.landmark == "f") {
 		button(5,625,"    8. Attempt to trade X",8)		//or hunt when outside
 	} else {
 		button(5,625,"    8. Attempt to hunt X",8)		//or trade when inside

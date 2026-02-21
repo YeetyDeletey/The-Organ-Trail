@@ -2,6 +2,7 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 	switch global.menu {
 		case 0.1:
 		global.showlandmark = 0
+		room_goto(rThinkingScreen)
 		screenwipe(683,384,1,0.2)
 		break;
 		

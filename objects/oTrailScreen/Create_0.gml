@@ -1,6 +1,30 @@
+//stuff to figure out whats happening when enter
+where = [0,0,0]
 
-//The square above this text needs to be able to change colors based on weather
-//Its the ground so maybe more as well too
+if global.showlandmark != 0 {//only at independence
+	menuvisual(683,384,global.showlandmark,-100)
+	global.menu = 0.1
+	//show_debug_message("how did we get here")
+} else if (global.landmark == "f" || global.landmark == "l") {
+	where = textbox()
+	global.menu = 0.2
+} else if (global.landmark == "r") {
+	show_debug_message("You're at a river")
+	room_goto(rRiverScreen)
+} else if (global.landmark == "s") {
+	show_debug_message("You're at a split path")
+}else {	//default is going from thinking to trail screen
+	global.menu = 1	
+	if global.textbox != "" {
+		where = textbox()
+		global.menu = 0.2
+	}
+}
+
+//river goes to options screen on how to cross
+//forts and landmarks just keep going with a text box
+//split opens up split menu box
+
 menuvisual(0,0,sTopOfTrailScreen)
 menuvisual(800,200,sWagon)
 instance_create_depth(0,347.5,10,oSolidSquare,{wid:room_width,hei:4})
@@ -19,16 +43,10 @@ function changingthings() {
 }
 changingthings()
 
-if global.showlandmark != 0 {
-	menuvisual(683,384,global.showlandmark,-100)
-	global.menu = 0.1
-} else {
-	global.menu = 1	
-}
-where = [0,0,0]
-
 cmax = 60
 counter = 0
+
+
 
 /*Global.menu states:
 0.1: Showing a landmark

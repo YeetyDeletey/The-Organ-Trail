@@ -6,6 +6,7 @@ function changelandmark(){
 		global.distancetolandmark = 102
 		global.nextlandmark = "Kansas River Crossing"
 		global.showlandmark = sIndependence
+		global.landmark = "f"
 		break;
 		
 		case "Kansas River Crossing":
@@ -13,6 +14,7 @@ function changelandmark(){
 		global.distancetolandmark = 83
 		global.nextlandmark = "Big Blue River Crossing"
 		global.showlandmark = sKansasRiverCrossing
+		global.landmark = "r"
 		break;
 		
 		case "Big Blue River Crossing":
@@ -20,6 +22,7 @@ function changelandmark(){
 		global.distancetolandmark = 119
 		global.nextlandmark = "Fort Kearney"
 		global.showlandmark = sBigBlueRiverCrossing
+		global.landmark = "r"
 		break;
 		
 		case "Fort Kearney":
@@ -27,6 +30,7 @@ function changelandmark(){
 		global.distancetolandmark = 250
 		global.nextlandmark = "Chimney Rock"
 		global.showlandmark = sIndependence
+		global.landmark = "f"
 		break;
 		
 		case "Chimney Rock":
@@ -34,6 +38,7 @@ function changelandmark(){
 		global.distancetolandmark = 86
 		global.nextlandmark = "Fort Laramie"
 		global.showlandmark = sIndependence
+		global.landmark = "l"
 		break;
 		
 		case "Fort Laramie":
@@ -41,6 +46,7 @@ function changelandmark(){
 		global.distancetolandmark = 190
 		global.nextlandmark = "Independence Rock"
 		global.showlandmark = sIndependence
+		global.landmark = "f"
 		break;
 		
 		case "Independence Rock":
@@ -48,6 +54,13 @@ function changelandmark(){
 		global.distancetolandmark = 102
 		global.nextlandmark = "South Pass"
 		global.showlandmark = sIndependence
+		global.landmark = "l"
+		break;
+		
+		
+		case "South Pass":
+		global.showlandmark = sIndependence
+		global.landmark = "s"
 		break;
 		
 		
@@ -57,6 +70,7 @@ function changelandmark(){
 		global.distancetolandmark = 
 		global.nextlandmark = ""
 		global.showlandmark = sIndependence
+		global.landmark = ""
 		break;
 		
 		
@@ -64,12 +78,3 @@ function changelandmark(){
 	}
 }
 
-/*
-global.distances = [102, 83, 118, 250, 86, 190, 102]
-global.textbox = "From Independence it is 102\nmiles to the Kansas River \ncrossing."
-global.landmarksprites = [sKansasRiverCrossing,sBigBlueRiverCrossing,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence,sIndependence]
-global.landmarkannouncements = ["From Kansas River Crossing\nit is 83 miles to the Big\nBlue River Crossing",
-"From the Big Blue River\nCrossing it is 118 miles\nto Fort Kearney",
-"On to chimney rock",
-"Fort Laramie",
-"hey this is Independence\nRock thats pretty cool"]

@@ -14,11 +14,10 @@ function nextday(){
 	global.distance += travel
 	global.distancetolandmark -= travel
 	if (global.distancetolandmark) <= 0 {	//if hit a landmark
-		global.inside = true
 		global.distance += global.distancetolandmark
 		changelandmark()
 	} else {						//if didn't hit a landmark
-		global.inside = false
+		global.landmark = ""
 		//maybe do different events based on time lost hunting?
 		randomevent()											//random event X~
 		

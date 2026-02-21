@@ -141,6 +141,9 @@ if global.goto != 0 {
 	switch global.goto {
 		//this is the code that actually adds new stuff to the screen
 		case 1:	//continue
+		if (global.landmark == "f") {
+			global.menu = 0.2
+		}
 		room_goto(rTrailScreen)
 		break;
 		
@@ -267,7 +270,7 @@ if global.goto != 0 {
 		
 		
 		case 8:	//trade or hunt
-		if (global.inside) {//trade
+		if (global.landmark == "f") {//trade
 			
 		} else {	//hunt
 			room_goto(rHunting)
