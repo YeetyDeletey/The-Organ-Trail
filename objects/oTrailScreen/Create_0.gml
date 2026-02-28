@@ -4,15 +4,14 @@ where = [0,0,0]
 if global.showlandmark != 0 {//only at independence
 	menuvisual(683,384,global.showlandmark,-100)
 	global.menu = 0.1
-	//show_debug_message("how did we get here")
 } else if (global.landmark == "f" || global.landmark == "l") {
 	where = textbox()
 	global.menu = 0.2
-} else if (global.landmark == "r") {
-	show_debug_message("You're at a river")
-	room_goto(rRiverScreen)
+} else if (global.landmark == "r") {	//could theoretically move this section 
+	room_goto(rRiverScreen)				//into code in thinking screen for efficiency
 } else if (global.landmark == "s") {
 	show_debug_message("You're at a split path")
+	room_goto(rSplitTrailScreen)
 }else {	//default is going from thinking to trail screen
 	global.menu = 1	
 	if global.textbox != "" {

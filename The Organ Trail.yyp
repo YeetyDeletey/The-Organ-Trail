@@ -82,6 +82,7 @@
     {"id":{"name":"oScreenwipe","path":"objects/oScreenwipe/oScreenwipe.yy",},},
     {"id":{"name":"oScreenwipebar","path":"objects/oScreenwipebar/oScreenwipebar.yy",},},
     {"id":{"name":"oSolidSquare","path":"objects/oSolidSquare/oSolidSquare.yy",},},
+    {"id":{"name":"oSplitTrailScreen","path":"objects/oSplitTrailScreen/oSplitTrailScreen.yy",},},
     {"id":{"name":"oSquare","path":"objects/oSquare/oSquare.yy",},},
     {"id":{"name":"oText","path":"objects/oText/oText.yy",},},
     {"id":{"name":"oTextBox","path":"objects/oTextBox/oTextBox.yy",},},
@@ -98,6 +99,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"rPreMattShop","path":"rooms/rPreMattShop/rPreMattShop.yy",},},
     {"id":{"name":"rRiverScreen","path":"rooms/rRiverScreen/rRiverScreen.yy",},},
+    {"id":{"name":"rSplitTrailScreen","path":"rooms/rSplitTrailScreen/rSplitTrailScreen.yy",},},
     {"id":{"name":"rThinkingScreen","path":"rooms/rThinkingScreen/rThinkingScreen.yy",},},
     {"id":{"name":"rTrailScreen","path":"rooms/rTrailScreen/rTrailScreen.yy",},},
     {"id":{"name":"BText","path":"scripts/BText/BText.yy",},},
@@ -160,6 +162,7 @@
     {"roomId":{"name":"rTrailScreen","path":"rooms/rTrailScreen/rTrailScreen.yy",},},
     {"roomId":{"name":"rHunting","path":"rooms/rHunting/rHunting.yy",},},
     {"roomId":{"name":"rRiverScreen","path":"rooms/rRiverScreen/rRiverScreen.yy",},},
+    {"roomId":{"name":"rSplitTrailScreen","path":"rooms/rSplitTrailScreen/rSplitTrailScreen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

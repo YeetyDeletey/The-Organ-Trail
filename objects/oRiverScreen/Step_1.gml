@@ -57,7 +57,6 @@ if global.goto != 0 {
 		global.goto = 0
 		global.trans = false
 		global.landmark = ""
-		show_debug_message("EEEEEEEEEEEEEEEEEEEEE")
 		room_goto(rTrailScreen)
 		break;
 		

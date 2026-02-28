@@ -35,6 +35,8 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			global.party[3].name = "LilTony"
 			global.party[3].infection = 30
 			global.party[4].name = "BigTony"
+			
+			global.move = 200
 			room_goto(rTrailScreen)
 			break;
 	

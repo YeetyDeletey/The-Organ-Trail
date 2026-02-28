@@ -1,5 +1,6 @@
-
-centertext(30,"Independence")
+if (global.landmark != "") {
+	centertext(30,global.atlandmark)
+}
 centertext(65,global.smonth + " " + string(global.day) + ", " + string(global.year))
 
 function mainscreen() {
