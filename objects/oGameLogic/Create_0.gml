@@ -23,6 +23,7 @@ global.tongues = 0
 //hunting stuff
 global.playerx = -1
 global.playery = -1
+global.htextbox = ""
 
 //custom stats
 global.job = "" //b,c,f

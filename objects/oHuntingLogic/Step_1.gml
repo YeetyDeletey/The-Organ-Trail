@@ -5,7 +5,7 @@ if keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left) {
 		break;
 	}
 }
-if (global.textbox != "") {
+if (global.htextbox != "") {
 	where = textbox()
 	global.menu = 3
 }
