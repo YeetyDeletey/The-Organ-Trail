@@ -33,7 +33,6 @@ function textbox(){
 	i = 0
 	while (i < array_length(linelist)) {
 		text(ex+13.3,347.5+(35*i)+17.5,linelist[i])
-		//show_debug_message(ex)
 		i++
 	}
 

@@ -23,6 +23,5 @@ if (place_meeting(x,y,oZombie)) and invin == 0 {
 	bite = 0
 }
 
-//show_debug_message(bite)
 
 

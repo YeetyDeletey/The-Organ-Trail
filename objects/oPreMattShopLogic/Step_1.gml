@@ -51,11 +51,6 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		case 2.05:
 		if global.txtinput = "y" or global.txtinput = "Y" {
-			show_debug_message(global.party[0].name)
-			show_debug_message(global.party[1].name)
-			show_debug_message(global.party[2].name)
-			show_debug_message(global.party[3].name)
-			show_debug_message(global.party[4].name)
 			screenwipe(250,485,9,3)
 		}
 		else if global.txtinput = "n" or global.txtinput = "N" {
