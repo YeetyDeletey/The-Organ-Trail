@@ -4,7 +4,6 @@
 if keyboard_check_pressed(vk_enter) and global.trans = false and global.txtinput != "" or global.canclick = true and mouse_check_button_pressed(mb_left) and global.trans = false and global.txtinput != "" {
 	switch global.menu {
 		case 0:								//Main menu starting screen
-		show_debug_message("yo its the thing")
 		switch global.txtinput {
 			case 1:
 			switch global.atlandmark {

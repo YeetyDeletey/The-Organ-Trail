@@ -33,6 +33,5 @@ if(food_gained){
     food_gained = false;
 }
 
-//show_debug_message(bite)
 
 

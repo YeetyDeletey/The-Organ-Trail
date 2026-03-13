@@ -258,7 +258,6 @@ if global.goto != 0 {
 				repeat(array_length(global.party[i].injuries)) {
 					text(xoffset,yoffset+70+(35*j),global.party[i].injuries[j])
 					j++
-					show_debug_message(j)
 				}
 			}
 			i++
