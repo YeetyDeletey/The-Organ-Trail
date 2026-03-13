@@ -5,3 +5,5 @@ y_speed = random_range(-3, 3)
 life = 7
 
 before = true;
+
+hit = false;

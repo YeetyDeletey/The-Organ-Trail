@@ -1,4 +1,24 @@
 if(global.menu == 1){
+    
+    if(hit){
+        instance_destroy();
+        if(oHuntingLogic.food_gained <= 95){
+            oHuntingLogic.food_gained += 5;
+            global.food += 5;
+            oPlayer.amount = 5;
+            oPlayer.food_gained = true;
+        }
+        else if(oHuntingLogic.food_gained > 95 && oHuntingLogic.food_gained < 100){
+            global.food += (100 - oHuntingLogic.food_gained);
+            oPlayer.amount = (100 - oHuntingLogic.food_gained);
+            oHuntingLogic.food_gained = 100;
+            oPlayer.food_gained = true;
+        }
+        else{
+            oPlayer.food_gained = true;
+            oPlayer.amount = 0;
+        }
+    }
    
    if(position_meeting(x, y, oWall)){
        y += 20

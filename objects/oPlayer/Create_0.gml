@@ -12,3 +12,6 @@ invin = 0
 maxinvin = 50
 
 bite = 0
+
+food_gained = false;
+amount = 0;
