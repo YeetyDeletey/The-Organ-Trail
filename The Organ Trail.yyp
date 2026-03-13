@@ -61,6 +61,7 @@
   "name":"The Organ Trail",
   "resources":[
     {"id":{"name":"fSans","path":"fonts/fSans/fSans.yy",},},
+    {"id":{"name":"oAnimal","path":"objects/oAnimal/oAnimal.yy",},},
     {"id":{"name":"oBoolet","path":"objects/oBoolet/oBoolet.yy",},},
     {"id":{"name":"oButton","path":"objects/oButton/oButton.yy",},},
     {"id":{"name":"oCenterText","path":"objects/oCenterText/oCenterText.yy",},},
@@ -85,6 +86,7 @@
     {"id":{"name":"oSolidSquare","path":"objects/oSolidSquare/oSolidSquare.yy",},},
     {"id":{"name":"oSplitTrailScreen","path":"objects/oSplitTrailScreen/oSplitTrailScreen.yy",},},
     {"id":{"name":"oSquare","path":"objects/oSquare/oSquare.yy",},},
+    {"id":{"name":"oSquirrel","path":"objects/oSquirrel/oSquirrel.yy",},},
     {"id":{"name":"oText","path":"objects/oText/oText.yy",},},
     {"id":{"name":"oTextBox","path":"objects/oTextBox/oTextBox.yy",},},
     {"id":{"name":"oThinkingScreen","path":"objects/oThinkingScreen/oThinkingScreen.yy",},},
@@ -149,6 +151,7 @@
     {"id":{"name":"sRock1","path":"sprites/sRock1/sRock1.yy",},},
     {"id":{"name":"sRock2","path":"sprites/sRock2/sRock2.yy",},},
     {"id":{"name":"sSpareparts","path":"sprites/sSpareparts/sSpareparts.yy",},},
+    {"id":{"name":"sSquirrel","path":"sprites/sSquirrel/sSquirrel.yy",},},
     {"id":{"name":"sTan","path":"sprites/sTan/sTan.yy",},},
     {"id":{"name":"sTopOfTrailScreen","path":"sprites/sTopOfTrailScreen/sTopOfTrailScreen.yy",},},
     {"id":{"name":"sTree1","path":"sprites/sTree1/sTree1.yy",},},

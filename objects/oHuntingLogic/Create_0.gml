@@ -23,6 +23,7 @@ spawn_time = random_range(1, 3)
 spawn1 = random_range(0, 800)
 spawn2 = random_range(0 ,1350)
 
+food_gained = 0;
 
 /*
 should probably add variables to say what should be created

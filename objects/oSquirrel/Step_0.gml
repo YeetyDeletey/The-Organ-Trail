@@ -1,5 +1,5 @@
 if(global.menu == 1){
-   
+    
     if(hit){
         instance_destroy();
         if(oHuntingLogic.food_gained <= 95){
@@ -19,7 +19,7 @@ if(global.menu == 1){
             oPlayer.amount = 0;
         }
     }
-    
+   
    if(position_meeting(x, y, oWall)){
        y += 20
        x -= 20;

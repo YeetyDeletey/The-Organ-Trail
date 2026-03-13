@@ -16,6 +16,8 @@ if (global.goto != 0) {
 }
 
 if (keyboard_check_pressed(ord("P"))) {
+    global.goto = 0;
+    global.trans = false;
 	room_goto(rTrailScreen)}
 
 counter++
@@ -24,6 +26,8 @@ if (counter == 60) {
 	counter = 0
 }
 if (global.time == 18) {
+    global.goto = 0;
+    global.trans = false;
 	room_goto(rThinkingScreen)
 }
 
