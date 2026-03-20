@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
   "%Name":"sDeer",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":50,
-  "bbox_left":12,
-  "bbox_right":58,
+  "bbox_left":10,
+  "bbox_right":62,
   "bbox_top":13,
   "collisionKind":1,
   "collisionTolerance":0,

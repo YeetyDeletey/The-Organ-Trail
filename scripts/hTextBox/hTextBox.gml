@@ -11,7 +11,7 @@ function htextbox(){
 	line = ""
 	go = false
 	while (i < string_length(string(global.htextbox))+1) {
-		if (string_char_at(string(global.htextboxtextbox),i) != "\n") {
+		if (string_char_at(string(global.htextbox),i) != "\n") {
 			line += string_char_at(string(global.htextbox),i)
 			if (i == string_length(string(global.htextbox))) {go = true}
 		} else {go = true}

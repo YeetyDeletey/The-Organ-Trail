@@ -23,6 +23,7 @@ if(global.menu == 1){
    if(position_meeting(x, y, oWall)){
        y += 20
        x -= 20;
+       show_debug_message("collided");
    }
    
    

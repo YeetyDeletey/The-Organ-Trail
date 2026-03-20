@@ -9,7 +9,7 @@ repeat(5) {
 	instance_create_layer(random(1350),random(750),"Terrain",oTree)
 }
 
-instance_create_layer(random(1350),random(750),"Zombies",oWalkZombie)
+//instance_create_layer(random(1350),random(750),"Zombies",oWalkZombie)
 
 
 draw_set_font(global.pressstart)
@@ -18,7 +18,8 @@ global.menu	= 1
 where = [0,0,0]
 counter = 0
 
-spawn_time = random_range(1, 3)
+spawn_time_d = random_range(1, 3)
+spawn_time_s = random_range(1, 3)
 
 spawn1 = random_range(0, 800)
 spawn2 = random_range(0 ,1350)

@@ -7,3 +7,6 @@ life = 7
 before = true;
 
 hit = false;
+
+image_xscale = 2
+image_yscale = 2
