@@ -110,6 +110,7 @@
     {"id":{"name":"CenterText","path":"scripts/CenterText/CenterText.yy",},},
     {"id":{"name":"ChangeLandmark","path":"scripts/ChangeLandmark/ChangeLandmark.yy",},},
     {"id":{"name":"DayCounter","path":"scripts/DayCounter/DayCounter.yy",},},
+    {"id":{"name":"hTextBox","path":"scripts/hTextBox/hTextBox.yy",},},
     {"id":{"name":"Menuvisual","path":"scripts/Menuvisual/Menuvisual.yy",},},
     {"id":{"name":"NextDay","path":"scripts/NextDay/NextDay.yy",},},
     {"id":{"name":"RandomEvent","path":"scripts/RandomEvent/RandomEvent.yy",},},

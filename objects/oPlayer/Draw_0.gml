@@ -1,5 +1,3 @@
-
-
 if(keyboard_check(ord("W"))){
     draw_sprite(sPlayer_U, 0, x, y)
     dir = 1
