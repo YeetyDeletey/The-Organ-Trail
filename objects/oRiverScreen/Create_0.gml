@@ -22,9 +22,41 @@ function mainscreen() {
 }
 
 
-wid = 100	//THIS SUBJECT TO CHANGE, TEMPORARY
-dep = 2.5	//THIS TOO
+wid = 100
+dep = 2.5
 crossingsprite = sFord
+
+where = [0,0,0]
+temp = global.textbox
+global.textbox = ""
+go = true
+
+switch global.atlandmark {
+	case "Kansas River Crossing":
+	wid = round(random_range(300,400))
+	dep = 3 + (round(random_range(0,10))/10)
+	break;
+	
+	
+	case "Big Blue River Crossing":
+	wid = round(random_range(160,200))
+	dep = 2.5 + (round(random_range(0,5))/10)
+	break;
+	
+	
+	case "Green River Crossing":
+	wid = round(random_range(200,500))
+	dep = 10 + (round(random_range(0,150))/10)
+	break;
+	
+	
+	case "Snake River Crossing":
+	wid = round(random_range(700,1100))
+	dep = 4 + (round(random_range(0,30))/10)
+	break;
+}
+
+
 
 
 text(250,310,"You must cross the river in")

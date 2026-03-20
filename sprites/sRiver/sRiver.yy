@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
   "%Name":"sRiver",
-  "bboxMode":0,
-  "bbox_bottom":399,
+  "bboxMode":2,
+  "bbox_bottom":1,
   "bbox_left":0,
-  "bbox_right":907,
+  "bbox_right":1,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,

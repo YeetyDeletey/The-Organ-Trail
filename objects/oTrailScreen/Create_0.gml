@@ -1,6 +1,6 @@
 //stuff to figure out whats happening when enter
 where = [0,0,0]
-
+show_debug_message(global.textbox)
 if global.showlandmark != 0 {//only at independence
 	menuvisual(683,384,global.showlandmark,-100)
 	global.menu = 0.1
@@ -23,7 +23,7 @@ if global.showlandmark != 0 {//only at independence
 //forts and landmarks just keep going with a text box
 //split opens up split menu box
 
-menuvisual(0,0,sTopOfTrailScreen)
+menuvisual(0,100,sTopOfTrailScreen)
 menuvisual(800,200,sWagon)
 instance_create_depth(0,347.5,10,oSolidSquare,{wid:room_width,hei:4})
 
