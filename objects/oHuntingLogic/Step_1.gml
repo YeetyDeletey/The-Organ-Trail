@@ -20,7 +20,10 @@ if (keyboard_check_pressed(ord("P"))) {
     global.trans = false;
 	room_goto(rTrailScreen)}
 
-counter++
+if(global.menu != 3){
+    counter++
+}
+
 if (counter == 60) {
 	global.time++
 	counter = 0
@@ -33,8 +36,8 @@ if (global.time == 18) {
 
 
 
-
-if(spawn_time_d < 0){
+if(global.menu == 1){
+    if(spawn_time_d <= 0){
     var c = choose(1, 2, 3, 4)
     if(c == 1){
         instance_create_layer(spawn2, 0, "Animals", oDeer)
@@ -49,13 +52,13 @@ if(spawn_time_d < 0){
     	instance_create_layer(1350, spawn2, "Animals", oDeer)
     }
     
-    spawn_time_d = random_range(1, 3)
+    spawn_time_d = random(2)
 }
 else{
     spawn_time_d -= delta_time/1000000
 }
 
-if(spawn_time_s < 0){
+if(spawn_time_s <= 0){
     var c = choose(1, 2, 3, 4)
     if(c == 1){
         instance_create_layer(spawn2, 0, "Animals", oSquirrel)
@@ -70,8 +73,10 @@ if(spawn_time_s < 0){
     	instance_create_layer(1350, spawn2, "Animals", oSquirrel)
     }
     
-    spawn_time_s = random_range(1, 3)
+    spawn_time_s = random(2)
 }
 else{
     spawn_time_s -= delta_time/1000000
 }
+}
+
