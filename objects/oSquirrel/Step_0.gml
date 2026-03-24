@@ -20,10 +20,14 @@ if(global.menu == 1){
         }
     }
    
-   if(position_meeting(x, y, oWall)){
-       y += 20
-       x -= 20;
-   }
+   if(place_meeting(x, y, oWall)){
+        if(place_meeting(x + x_speed, y, oWall)){
+            x_speed = -1* x_speed
+        }
+        if(place_meeting(x, y + y_speed, oWall)){
+            y_speed = -1* y_speed
+        }
+    }
    
    
    x += x_speed 
@@ -33,6 +37,10 @@ if(global.menu == 1){
    if(x > 1350 || x < -15 || y < -15 || y > 820){
        instance_destroy()
    }
+    if(place_meeting(x, y, oBorder)){
+        show_debug_message("collided with border");
+        instance_destroy();
+    }
    if(life < 0){ 
     instance_destroy()
     } 

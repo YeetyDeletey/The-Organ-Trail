@@ -63,6 +63,7 @@
     {"id":{"name":"fSans","path":"fonts/fSans/fSans.yy",},},
     {"id":{"name":"oAnimal","path":"objects/oAnimal/oAnimal.yy",},},
     {"id":{"name":"oBoolet","path":"objects/oBoolet/oBoolet.yy",},},
+    {"id":{"name":"oBorder","path":"objects/oBorder/oBorder.yy",},},
     {"id":{"name":"oButton","path":"objects/oButton/oButton.yy",},},
     {"id":{"name":"oCenterText","path":"objects/oCenterText/oCenterText.yy",},},
     {"id":{"name":"oChangeColor","path":"objects/oChangeColor/oChangeColor.yy",},},

@@ -20,14 +20,16 @@ if(global.menu == 1){
         }
     }
     
-   if(position_meeting(x, y, oWall)){
-       y += 20
-       x -= 20;
-       show_debug_message("collided");
-   }
-   
-   
-   x += x_speed 
+    if(place_meeting(x, y, oWall)){
+        if(place_meeting(x + x_speed, y, oWall)){
+            x_speed = -1* x_speed
+        }
+        if(place_meeting(x, y + y_speed, oWall)){
+            y_speed = -1* y_speed
+        }
+    }
+    
+    x += x_speed
     y += y_speed
    
    
@@ -40,6 +42,12 @@ if(global.menu == 1){
     else{
         life -= delta_time/1000000
     }
+    
+    if(place_meeting(x, y, oBorder)){
+        instance_destroy();
+    }
 }   
+
+
 
 
