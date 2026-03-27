@@ -8,6 +8,7 @@ global.goto = 0
 global.trans = false
 global.canclick = false
 global.txtinput = ""
+global.eventMenu = 0;
 
 
 //player stats

@@ -56,7 +56,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.221",
   },
   "name":"The Organ Trail",
   "resources":[
@@ -69,6 +69,7 @@
     {"id":{"name":"oChangeColor","path":"objects/oChangeColor/oChangeColor.yy",},},
     {"id":{"name":"oCursor","path":"objects/oCursor/oCursor.yy",},},
     {"id":{"name":"oDeer","path":"objects/oDeer/oDeer.yy",},},
+    {"id":{"name":"oEventMenu","path":"objects/oEventMenu/oEventMenu.yy",},},
     {"id":{"name":"oGameLogic","path":"objects/oGameLogic/oGameLogic.yy",},},
     {"id":{"name":"oGotoroom","path":"objects/oGotoroom/oGotoroom.yy",},},
     {"id":{"name":"oHuntingLogic","path":"objects/oHuntingLogic/oHuntingLogic.yy",},},
@@ -97,6 +98,7 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"oWrite","path":"objects/oWrite/oWrite.yy",},},
     {"id":{"name":"oZombie","path":"objects/oZombie/oZombie.yy",},},
+    {"id":{"name":"rEventMenu","path":"rooms/rEventMenu/rEventMenu.yy",},},
     {"id":{"name":"rHunting","path":"rooms/rHunting/rHunting.yy",},},
     {"id":{"name":"rMain_Menu1","path":"rooms/rMain_Menu1/rMain_Menu1.yy",},},
     {"id":{"name":"rMattShop","path":"rooms/rMattShop/rMattShop.yy",},},
@@ -115,6 +117,7 @@
     {"id":{"name":"Menuvisual","path":"scripts/Menuvisual/Menuvisual.yy",},},
     {"id":{"name":"NextDay","path":"scripts/NextDay/NextDay.yy",},},
     {"id":{"name":"RandomEvent","path":"scripts/RandomEvent/RandomEvent.yy",},},
+    {"id":{"name":"RockyMountainEvents","path":"scripts/RockyMountainEvents/RockyMountainEvents.yy",},},
     {"id":{"name":"Screenwipe","path":"scripts/Screenwipe/Screenwipe.yy",},},
     {"id":{"name":"Square","path":"scripts/Square/Square.yy",},},
     {"id":{"name":"Text","path":"scripts/Text/Text.yy",},},
@@ -173,6 +176,7 @@
     {"roomId":{"name":"rHunting","path":"rooms/rHunting/rHunting.yy",},},
     {"roomId":{"name":"rRiverScreen","path":"rooms/rRiverScreen/rRiverScreen.yy",},},
     {"roomId":{"name":"rSplitTrailScreen","path":"rooms/rSplitTrailScreen/rSplitTrailScreen.yy",},},
+    {"roomId":{"name":"rEventMenu","path":"rooms/rEventMenu/rEventMenu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

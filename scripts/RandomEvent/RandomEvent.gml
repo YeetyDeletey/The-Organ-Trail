@@ -18,8 +18,12 @@ function randomevent(){
 			//when an event happens it'll pop up a text box and change some variables
 			//some custom events down the line will force the hunting minigame
 			case 1:
-		
+		          RockyMountainEvents();
 			break;
+            
+            case 2:
+                
+            break;
 		
 		
 			default:
