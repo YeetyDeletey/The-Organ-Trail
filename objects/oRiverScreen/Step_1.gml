@@ -44,8 +44,6 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 		
 		case 3.5:
 		global.textbox = temp
-		show_debug_message(temp)
-		show_debug_message(global.textbox)
 		global.menu = 0.2
 		global.goto = 0
 		global.trans = false

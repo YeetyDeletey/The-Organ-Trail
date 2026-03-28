@@ -1,6 +1,5 @@
 //stuff to figure out whats happening when enter
 where = [0,0,0]
-show_debug_message(global.textbox)
 if global.showlandmark != 0 {//only at independence
 	menuvisual(683,384,global.showlandmark,-100)
 	global.menu = 0.1

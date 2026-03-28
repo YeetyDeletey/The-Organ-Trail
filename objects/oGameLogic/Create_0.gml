@@ -45,7 +45,8 @@ global.nextlandmark = "Kansas River Crossing"
 global.atlandmark = "Independence"
 //global.textbox is so that it can be set by random objects at any point in the step without causing problems
 global.textbox = "From Independence it is 102\nmiles to the Kansas River \ncrossing."
-
+global.climate = "eastern forest";
+global.weathertemp = 50;
 
 
 //player settings

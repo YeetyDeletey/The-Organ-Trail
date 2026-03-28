@@ -38,7 +38,7 @@ if(global.menu == 1){
        instance_destroy()
    }
     if(place_meeting(x, y, oBorder)){
-        show_debug_message("collided with border");
+        //show_debug_message("collided with border");
         instance_destroy();
     }
    if(life < 0){ 

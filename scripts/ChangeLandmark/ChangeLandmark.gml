@@ -1,4 +1,5 @@
-// removing destinations, distances, landmarksprites, landmarkannouncements
+//								NOTE: NEED TO CHECK WHERE IT ACTUALLY CHANGES CLIMATE
+									//CURRENTLY LIKELY VERY WRONG
 function changelandmark(){
 	global.atlandmark = global.nextlandmark
 	switch global.nextlandmark {
@@ -32,6 +33,7 @@ function changelandmark(){
 		global.nextlandmark = "Chimney Rock"
 		global.showlandmark = sIndependence
 		global.landmark = "f"
+		global.climate = "plains"
 		break;
 		
 		case "Chimney Rock":
@@ -40,6 +42,7 @@ function changelandmark(){
 		global.nextlandmark = "Fort Laramie"
 		global.showlandmark = sIndependence
 		global.landmark = "l"
+		global.climate = "desert"
 		break;
 		
 		case "Fort Laramie":
@@ -56,6 +59,7 @@ function changelandmark(){
 		global.nextlandmark = "South Pass"
 		global.showlandmark = sIndependence
 		global.landmark = "l"
+		global.climate = "rocky mountains"
 		break;
 		
 		
@@ -88,6 +92,7 @@ function changelandmark(){
 		global.nextlandmark = "Fort Hall"
 		global.showlandmark = sIndependence
 		global.landmark = "l"
+		global.climate = "plains"
 		break;
 		
 		
@@ -121,6 +126,7 @@ function changelandmark(){
 		case "Blue Mountains":
 		global.showlandmark = sIndependence
 		global.landmark = "s"
+		global.climate = "rocky mountains"
 		break;
 		
 		
@@ -136,6 +142,7 @@ function changelandmark(){
 		case "The Dalles":
 		global.showlandmark = sIndependence
 		global.landmark = "s"
+		global.climate = "western forest"
 		break;
 		
 		
