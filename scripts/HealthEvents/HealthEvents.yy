@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"RockyMountainEvents",
+  "%Name":"HealthEvents",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"RockyMountainEvents",
+  "name":"HealthEvents",
   "parent":{
     "name":"Event types",
     "path":"folders/Scripts/Event types.yy",

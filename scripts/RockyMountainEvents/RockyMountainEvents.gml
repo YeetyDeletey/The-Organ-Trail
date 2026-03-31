@@ -1,4 +1,4 @@
-function RockyMountainEvents(){
+function rockymountainevents(){
     event = irandom(5);
     
     switch event{
@@ -15,4 +15,5 @@ function RockyMountainEvents(){
             break;
         
     }
+	return false;
 }
