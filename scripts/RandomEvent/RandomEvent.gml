@@ -3,30 +3,33 @@ function randomevent(){
 	//establish chances of each event type happening
 	//note that for stuff like health this will be more complex,
 	//random is a placeholder
-	heventoccurs = random(10)
+	heventoccurs = random(10) > 10
 	weventoccurs = random(10)
 	leventoccurs = random(10)
 	ceventoccurs = random(10)
 	
-	//player health decreasing (diseases like dysntary)
-	if (heventoccurs > 10) {
-		healthevents()	//X
+	//player health decreasing (diseases like dysntary)		X
+	if (heventoccurs) {
+		healthevents()
 		
 		
 		
-	//weather based (droughts, blizzard)
+	//weather based (droughts, blizzard)	X
 	} else if (weventoccurs > 10) {
-		weatherevents()	//X
+		weatherevents()
 	
 	
 	
-	//location / something about the trail itself (bad water, dead end trail, robbery)
+	//location / something about the trail itself (bad water, dead end trail, robbery)	X
 	} else if (leventoccurs > 7) {
+		//might be worth making the chance of this event type fluctuate based on which climate
 		switch global.climate {
 			case "eastern forest":
+			easternforestevents()
 			break;
 			
 			case "plains":
+			plainsevents()
 			break;
 			
 			case "rocky mountains":
@@ -34,42 +37,19 @@ function randomevent(){
 			break;
 			
 			case "desert":
+			desertevents()
 			break;
 			
 			case "western forest":
+			westernforestevents()
 			break;
 		}
 		
 		
 	
-	//constant chance - accident on the trail (broken bone, broken wagon part)
-	} else if (ceventoccurs > 7) {		//this is if an event does occur, 2/10 chance
-		event = irandom(99) + 1
-		
-		if (random(10) > 5) {
-			global.textbox = "Random event\ngain 15 dollars"
-			global.money += 15
-		} else {
-			global.textbox = "Random event\nlose 15 dollars"
-			global.money -= 15
-		}
-		
-		switch event {
-			//when an event happens it'll pop up a text box and change some variables
-			//some custom events down the line will force the hunting minigame
-			case 1:
-		          
-			break;
-            
-            case 2:
-                
-            break;
-		
-		
-			default:
-			//default should be nothing happens
-			break;
-		}
+	//constant chance - accident on the trail (broken bone, broken wagon part)		X
+	} else if (ceventoccurs > 7) {
+		constantchanceevents()
 	}
 }
 	

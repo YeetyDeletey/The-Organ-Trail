@@ -4,10 +4,14 @@ function nextday(){
 	
 	global.food -= global.eat									//eat food
 	
+	
+	
 	if (global.food < 0) {										//health changes
 		global.food = 0
 		//do something 	if not eating enough
 	}
+	
+	
 	
 																//movement
 	travel = round((global.move + irandom_range(-1,2)) * (1-(global.time-8)*0.1))
@@ -19,14 +23,22 @@ function nextday(){
 	} else {						//if didn't hit a landmark
 		global.landmark = ""
 		//maybe do different events based on time lost hunting?
+		
+		
+		
 		randomevent()											//random event X~
 		
+		
+		
 		repeat(array_length(global.party)) {											//zombie infection
-			
+			//consider moving out of this statement and/or making it progress
+			//when hitting a landmark, just not to breakpoints
 		}
 	}
 	
 	incrementday()												//day tracker
+	
+	
 	
 	weather()													//reroll the weather X~
 	instance_create_depth(0,350,1,oChangeColor)

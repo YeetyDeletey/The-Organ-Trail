@@ -50,7 +50,7 @@ function weather(){
 		
 		case "western forest":
 		tmax = 100
-		tmin = 40
+		tmin = 30
 		rmax = 25
 		break;
 	}
@@ -129,7 +129,9 @@ function weather(){
 		break;
 	}
 		
-	perc = (global.weathertemp - tmin) / (tmax - tmin) * 10
+		
+		
+	perc = (global.weathertemp - tmin) / (tmax - tmin) * 10		//calculating temperature
 	if (num > perc) {
 		global.weathertemp += irandom(rmax)
 	} else {
@@ -142,11 +144,26 @@ function weather(){
 	if global.weathertemp > 81 {
 		global.weather = "hot"
 	} else if global.weathertemp > 54 {
-		global.weather = "warm"
+		num = irandom(9)+1
+		if (num > 9) {
+			global.weather = "rainy"
+		} else {
+			global.weather = "warm"
+		}
 	} else if global.weathertemp > 27 {
-		global.weather = "cool"
+		num = irandom(9)+1
+		if (num > 9) {
+			global.weather = "rainy"
+		} else {
+			global.weather = "cool"
+		}
 	} else {
-		global.weather = "cold"
+		num = irandom(9)+1
+		if (num > 9) {
+			global.weather = "snowy"
+		} else {
+			global.weather = "cold"
+		}
 	} 
 	//show_debug_message(string(num) + "  |  " + string(perc) + "  Weather: " + string(global.weathertemp) + "  |  " + global.weather)
 }
