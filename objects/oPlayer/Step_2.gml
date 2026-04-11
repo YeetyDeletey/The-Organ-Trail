@@ -35,3 +35,4 @@ if(food_gained){
 
 
 
+depth = -y

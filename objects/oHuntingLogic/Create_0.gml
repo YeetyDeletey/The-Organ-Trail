@@ -1,15 +1,15 @@
 
 //making things, will add if/switch statement based on type later
-instance_create_layer(704,396,"Player",oPlayer)
+instance_create_depth(704,396,1,oPlayer)
 
 repeat(10) {
-	instance_create_layer(random(1350),random(750),"Terrain",oRock)
+	instance_create_depth(random(room_width),random(room_height),1,oRock)
 }
 repeat(5) {
-	instance_create_layer(random(1350),random(750),"Terrain",oTree)
+	instance_create_depth(random(room_width),random(room_height),1,oTree)
 }
 
-//instance_create_layer(random(1350),random(750),"Zombies",oWalkZombie)
+//instance_create_depth(random(1350),random(750),1,oWalkZombie)
 
 
 draw_set_font(global.pressstart)

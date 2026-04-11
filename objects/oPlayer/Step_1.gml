@@ -24,7 +24,7 @@ if (global.menu == 1) {
 	}
     
     if(shoot){
-        instance_create_layer(x, y, "Player", oBoolet)
+        instance_create_depth(x, y, 1, oBoolet)
     }
     
 	global.playerx = x

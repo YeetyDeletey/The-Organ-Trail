@@ -1,21 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oTree",
+  "%Name":"oHuntingObjectTemplate",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTree",
+  "name":"oHuntingObjectTemplate",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hunting Stuff",
-    "path":"folders/Objects/Hunting Stuff.yy",
+    "name":"Templates",
+    "path":"folders/Objects/Templates.yy",
   },
-  "parentObjectId":{
-    "name":"oWall",
-    "path":"objects/oWall/oWall.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sCTree1",
-    "path":"sprites/sCTree1/sCTree1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

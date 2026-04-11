@@ -10,3 +10,4 @@ while(place_meeting(x,y, oPlayer) || place_meeting(x, y, oZombie)){
 
 image_xscale = 2
 image_yscale = 2
+depth = -y
