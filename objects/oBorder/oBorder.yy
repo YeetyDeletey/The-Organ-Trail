@@ -9,7 +9,10 @@
     "name":"Abstract objects",
     "path":"folders/Objects/Hunting Stuff/Abstract objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oWall",
+    "path":"objects/oWall/oWall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sBlack",
+    "path":"sprites/sBlack/sBlack.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

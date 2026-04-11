@@ -31,12 +31,12 @@ function htextbox(){
 	ex = room_width/2 - (13.3*wid)
 	
 	i = 0
-	while (i < array_length(linelist)) {
-		text(ex+13.3,347.5+(35*i)+17.5,linelist[i])
+	while (i < array_length(linelist)) {	//note the depth it spawns at
+		instance_create_depth(ex+13.3,365+(35*i),-1001,oText,{tex:linelist[i],bl:false})
 		i++
 	}
 
-	instance_create_depth(ex,347.5,2,oTextBox,{wid:wid,hei:hei})
+	instance_create_depth(ex,347.5,-1000,oTextBox,{wid:wid,hei:hei})
 	
 	global.htextbox = ""
 	return [ex+13.3,365,hei];

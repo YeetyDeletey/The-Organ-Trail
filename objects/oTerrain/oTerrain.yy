@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oTree",
+  "%Name":"oTerrain",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTree",
+  "name":"oTerrain",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hunting Stuff",
-    "path":"folders/Objects/Hunting Stuff.yy",
+    "name":"Terrain",
+    "path":"folders/Objects/Hunting Stuff/Terrain.yy",
   },
   "parentObjectId":{
     "name":"oWall",
@@ -29,13 +29,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"spr","filters":[],"listItems":[],"multiselect":false,"name":"spr","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rock","varType":2,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCTree1",
-    "path":"sprites/sCTree1/sCTree1.yy",
+    "name":"sRock1",
+    "path":"sprites/sRock1/sRock1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

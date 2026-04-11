@@ -9,8 +9,8 @@
   "name":"oWalkZombie",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hunting Stuff",
-    "path":"folders/Objects/Hunting Stuff.yy",
+    "name":"Zombies",
+    "path":"folders/Objects/Hunting Stuff/Zombies.yy",
   },
   "parentObjectId":{
     "name":"oZombie",

@@ -2,12 +2,32 @@
 //making things, will add if/switch statement based on type later
 instance_create_depth(704,396,1,oPlayer)
 
-repeat(10) {
-	instance_create_depth(random(room_width),random(room_height),1,oRock)
+switch global.climate {
+	case "eastern forest":
+	repeat(random_range(6,9)) {instance_create_depth(random(room_width-100)+50,random(room_height-100)+50,1,oTerrain,{spr:"dtree"})}
+	repeat(random_range(3,5)) {instance_create_depth(random(room_width-200)+100,random(room_height-200)+100,1,oTerrainVisual,{spr:"grass"})}
+	break;
+			
+	case "plains":	//7-10 but actually 0 (all background)
+	repeat(random_range(7,10)) {instance_create_depth(random(room_width-200)+100,random(room_height-200)+100,1,oTerrainVisual,{spr:"grass"})}
+	break;
+			
+	case "rocky mountains":	//6-14
+	repeat(random_range(3,7)) {instance_create_depth(random(room_width),random(room_height-200)+100,1,oTerrain,{spr:"rock"})}
+	repeat(random_range(3,7)) {instance_create_depth(random(room_width-200)+100,random(room_height),1,oTerrain,{spr:"ctree"})}
+	break;
+			
+	case "desert":
+	repeat(random_range(2,4)) {instance_create_depth(random(room_width-200)+100,random(room_height-100)+50,1,oTerrain,{spr:"cacti"})}
+	repeat(random_range(3,6)) {instance_create_depth(random(room_width),random(room_height),1,oTerrain,{spr:"desert shrub"})}
+	repeat(random_range(2,5)) {instance_create_depth(random(room_width),random(room_height-200)+100,1,oTerrain,{spr:"rock"})}
+	break;
+			
+	case "western forest":	//7-10, not fully happy with it
+	repeat(random_range(7,10)) {instance_create_depth(random(room_width-100)+50,random(room_height-100)+50,1,oTerrain,{spr:"ctree"})}
+	break;
 }
-repeat(5) {
-	instance_create_depth(random(room_width),random(room_height),1,oTree)
-}
+
 
 //instance_create_depth(random(1350),random(750),1,oWalkZombie)
 
