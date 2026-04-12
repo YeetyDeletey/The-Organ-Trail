@@ -39,7 +39,8 @@ if (global.menu == 1) {		//The timer for when the trail screen is running
 			}
 		}
 		
-		counter = 0
+		counter = -20
+		settravel()
 	}
 }
 

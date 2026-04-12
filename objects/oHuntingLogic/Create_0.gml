@@ -1,9 +1,8 @@
 
-//making things, will add if/switch statement based on type later
 instance_create_depth(704,396,1,oPlayer)
 
 switch global.climate {
-	case "eastern forest":
+	case "eastern forest":	//6-9, not content with how I draw trees
 	repeat(random_range(6,9)) {instance_create_depth(random(room_width-100)+50,random(room_height-100)+50,1,oTerrain,{spr:"dtree"})}
 	repeat(random_range(3,5)) {instance_create_depth(random(room_width-200)+100,random(room_height-200)+100,1,oTerrainVisual,{spr:"grass"})}
 	break;
@@ -17,7 +16,7 @@ switch global.climate {
 	repeat(random_range(3,7)) {instance_create_depth(random(room_width-200)+100,random(room_height),1,oTerrain,{spr:"ctree"})}
 	break;
 			
-	case "desert":
+	case "desert":	//8-15
 	repeat(random_range(2,4)) {instance_create_depth(random(room_width-200)+100,random(room_height-100)+50,1,oTerrain,{spr:"cacti"})}
 	repeat(random_range(3,6)) {instance_create_depth(random(room_width),random(room_height),1,oTerrain,{spr:"desert shrub"})}
 	repeat(random_range(2,5)) {instance_create_depth(random(room_width),random(room_height-200)+100,1,oTerrain,{spr:"rock"})}

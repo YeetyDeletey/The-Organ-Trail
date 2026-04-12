@@ -47,6 +47,7 @@ global.atlandmark = "Independence"
 global.textbox = "From Independence it is 102\nmiles to the Kansas River \ncrossing."
 global.climate = "eastern forest"
 global.weathertemp = 50
+global.travel = 0
 
 
 //player settings

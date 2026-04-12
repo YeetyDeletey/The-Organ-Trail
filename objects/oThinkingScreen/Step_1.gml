@@ -62,6 +62,7 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 			screenwipe(250,240,10,4.01)
 			break;
 		}
+		settravel()
 		break;
 		case 4.01:
 		instance_create_depth(room_width/2,744,1,oScreenwipebar)

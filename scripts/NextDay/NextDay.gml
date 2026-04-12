@@ -14,9 +14,8 @@ function nextday(){
 	
 	
 																//movement
-	travel = round((global.move + irandom_range(-1,2)) * (1-(global.time-8)*0.1))
-	global.distance += travel
-	global.distancetolandmark -= travel
+	global.distance += global.travel
+	global.distancetolandmark -= global.travel
 	if (global.distancetolandmark) <= 0 {	//if hit a landmark
 		global.distance += global.distancetolandmark
 		changelandmark()

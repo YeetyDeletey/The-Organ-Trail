@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Other stuff idk",
-    "path":"folders/Sprites/Other stuff idk.yy",
+    "name":"River crossing visuals",
+    "path":"folders/Sprites/Small Visuals/River crossing visuals.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -22,9 +22,10 @@ if global.showlandmark != 0 {//only at independence
 //forts and landmarks just keep going with a text box
 //split opens up split menu box
 
-menuvisual(0,100,sTopOfTrailScreen)
-menuvisual(800,200,sWagon)
+menuvisual(0,70,sTopOfTrailScreen)
+menuvisual(850,200,sWagon)
 instance_create_depth(0,347.5,10,oSolidSquare,{wid:room_width,hei:4})
+instance_create_depth(0,203,1,oTrailMarker)
 
 centertext(500,"Press ENTER to size up the situation")
 
@@ -40,10 +41,9 @@ function changingthings() {
 }
 changingthings()
 
-cmax = 60
+cmax = 40
 counter = 0
-
-
+settravel()
 
 /*Global.menu states:
 0.1: Showing a landmark

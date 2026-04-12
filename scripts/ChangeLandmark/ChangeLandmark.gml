@@ -12,7 +12,7 @@ function changelandmark(){
 		break;
 		
 		case "Kansas River Crossing":
-		global.textbox = "From the Big Blue River\nCrossing it is 118 miles\nto Fort Kearney"
+		global.textbox = "From the Kansas River\nCrossing it is 83 miles to \nthe Big Blue River Crossing"
 		global.distancetolandmark = 83
 		global.nextlandmark = "Big Blue River Crossing"
 		global.showlandmark = sKansasRiverCrossing
@@ -20,8 +20,8 @@ function changelandmark(){
 		break;
 		
 		case "Big Blue River Crossing":
-		global.textbox = "On to Fort Kearney"
-		global.distancetolandmark = 119
+		global.textbox = "From the Big Blue River\nCrossing it is 118 miles\nto Fort Kearney"
+		global.distancetolandmark = 118
 		global.nextlandmark = "Fort Kearney"
 		global.showlandmark = sBigBlueRiverCrossing
 		global.landmark = "r"

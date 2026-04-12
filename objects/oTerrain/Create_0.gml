@@ -1,7 +1,3 @@
-while(place_meeting(x,y,oPlayer) || place_meeting(x,y,oZombie)){
-    instance_create_depth(random(1350),random(750),1,oTerrain,{spr:spr})
-    instance_destroy();
-}
 if (random(1) > 0.4) {image_xscale = 2}
 else {image_xscale = -2}
 image_yscale = 2
@@ -39,4 +35,9 @@ switch spr {
 	if(rand > 0.4) {sprite_index = sDesertShrub1}
 	else {sprite_index = sDesertShrub2}
 	break;
+}
+
+while(place_meeting(x,y,oPlayer) || place_meeting(x,y,oZombie)){
+    instance_create_depth(random(room_width),random(room_height),1,oTerrain,{spr:spr})
+    instance_destroy();
 }
