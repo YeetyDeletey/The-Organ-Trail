@@ -17,15 +17,16 @@ if global.showlandmark != 0 {//only at independence
 		global.menu = 0.2
 	}
 }
-
 //river goes to options screen on how to cross
 //forts and landmarks just keep going with a text box
 //split opens up split menu box
 
+
+
+//creating visual stuff
 menuvisual(0,70,sTopOfTrailScreen)
 menuvisual(850,200,sWagon)
 instance_create_depth(0,347.5,10,oSolidSquare,{wid:room_width,hei:4})
-instance_create_depth(0,203,1,oTrailMarker)
 
 centertext(500,"Press ENTER to size up the situation")
 
@@ -41,6 +42,40 @@ function changingthings() {
 }
 changingthings()
 
+switch global.nextlandmark {
+	//NOTE: STILL NEED FORT HALL, FORT BOISE, BLUE MOUNTAINS, FORT WALLA WALLA, THE DALLES
+	case "Fort Kearney":
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTFortKearney})
+	break;
+	case "Chimney Rock":
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTChimneyRock})
+	break;
+	case "Fort Laramie":
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTFortLaramie})
+	break;
+	case "Independence Rock":
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTIndependenceRock})
+	break;
+	case "South Pass":
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTSouthPass})
+	break;
+	case "Fort Bridger":
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTFortBridger})
+	break;
+	case "Soda Springs":
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTSodaSprings})
+	break;
+	
+	default:
+	//this catches all the river crossings
+	instance_create_depth(0,203,1,oTrailMarker,{spr:sTRiver})
+	break;
+}
+
+
+
+
+//setting up variables
 cmax = 40
 counter = 0
 settravel()

@@ -1,6 +1,7 @@
 x = 680 - (global.distancetolandmark * 10)
 image_xscale = 4.5
 image_yscale = 4.5
+sprite_index = spr
 
 /*
 I wasted a bunch of time on this before deciding not to include it

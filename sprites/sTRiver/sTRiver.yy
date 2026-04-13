@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Trail visuals",
-    "path":"folders/Sprites/Small Visuals/Trail visuals.yy",
+    "name":"Trail markers",
+    "path":"folders/Sprites/Small Visuals/Trail markers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
