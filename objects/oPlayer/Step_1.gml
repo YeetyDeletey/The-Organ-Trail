@@ -25,6 +25,7 @@ if (global.menu == 1) {
     
     if(shoot){
         instance_create_depth(x, y, 1, oBoolet)
+        global.bulletsShot+=1;
     }
     
 	global.playerx = x

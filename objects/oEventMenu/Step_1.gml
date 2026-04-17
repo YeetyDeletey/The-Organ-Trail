@@ -5,67 +5,86 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
 	switch global.eventMenu {
 		//global.menu being 0 means its the base screen
 		//you only get off it after a screenwipe
-		case 0:								//Main menu starting screen
-		switch global.txtinput {
-							//txtinput is whatever the player inputted
-							//last num of screenwipe sets global.goto to itself
-							//when global.goto gets set to anything it does new stuff
-							//(creating new text)
-			case 1:
-			screenwipe(250,135,12,1)
-			break;
-	
-	
-			case 2:
-			global.menu = 2
-			screenwipe(250,135,12,2)
-			break;
-	
-	
-			case 3:
-			break;
-	
-	
-			case 4:
-			break;
-	
 		
-			default:
-			break;
-		}
-		break;
-		
-		//when not on the main screen, it is assumed that you're 
-		//clicking through multiple text boxes
-		default:
-		screenwipe(250,240,10,(global.menu + 0.01))
-		break;
-	}
+        case 1:
+            if(global.menu == 10000){
+                switch global.txtinput{
+                  case 1:
+                      screenwipe(250, 135,12,1);
+                      break;
+                  case 2:
+                      screenwipe(250, 135,12,2);
+                      break;
+                  case 3:
+                      screenwipe(250, 135,12,3);
+                      break;
+                  case 4:
+                      screenwipe(250, 135,12,4);
+                      break;
+                  case 5:
+                      screenwipe(250, 135,12,5);
+                      break;
+                }
+            }
+            else{
+                room_goto(rThinkingScreen);
+            }
+            
+        
+        break;
+
+
+        case 2:
+        global.menu = 2
+        screenwipe(250,135,12,2)
+        break;
+
+
+        case 3:
+        break;
+
+
+        case 4:
+        break;
+
+    
+        default:
+        break;
+    }
 }
 
 if global.goto != 0 {
-	switch global.goto {
+	switch global.eventMenu {
 		//this is the code that actually adds new stuff to the screen
-		case 1:
-		//if going to another room do this
-		global.menu = 0
-		global.goto = 0
-		global.trans = false
-		room_goto(rPreMattShop)
+		case 1: 
+            switch global.goto{ 
+                case 1:
+                    text(250, 135, "You have clicked Option 1");
+                    break;
+                case 2:
+                    text(250, 135, "You clicked Option 2");
+                    break;
+                case 3:
+                    text(250, 135, "You clicked Option 3");
+                    break;
+                case 4:
+                    text(250, 135, "You clicked Option 4");
+                    break;
+                case 5:
+                    text(250, 135, "You clicked Option 5");
+                    break;
+                
+            }
 		break;
 		
 		
 		case 2:
-		//if writing text do this
-		text(250,135,"Many kinds of people made the ")
-		text(250,170,"trip to Oregon.")
-		centertext(744,"Press ENTER or click to continue")
+
+		
 		break;
 		
 		case 2.01:
-		//if continuing text do this
-		text(250,135,"Many kinds of people made the ")
-		text(250,170,"trip to Oregon.")
+		
 		break;
 		
 		

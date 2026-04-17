@@ -11,6 +11,7 @@ global.txtinput = ""
 global.eventMenu = 0;
 
 
+
 //player stats
 global.money = 0
 global.oxen = 0
@@ -20,6 +21,7 @@ global.ammo = 0
 global.wheels = 0
 global.axles = 0
 global.tongues = 0
+global.bulletsShot = 0;
 
 //hunting stuff
 global.playerx = -1
