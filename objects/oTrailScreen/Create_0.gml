@@ -10,7 +10,7 @@ if global.showlandmark != 0 {//only at independence
 	room_goto(rRiverScreen)				//into code in thinking screen for efficiency
 } else if (global.landmark == "s") {
 	room_goto(rSplitTrailScreen)
-}else {	//default is going from thinking to trail screen
+} else {	//default is going from thinking to trail screen
 	global.menu = 1	
 	if global.textbox != "" {
 		where = textbox()
