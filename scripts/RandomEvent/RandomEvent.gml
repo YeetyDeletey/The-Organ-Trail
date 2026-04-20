@@ -31,7 +31,7 @@ function randomevent(){
 			
 			case "plains":
 			//plainsevents();
-                rockymountainevents();
+               rockymountainevents();
 			break;
 			
 			case "rocky mountains":
