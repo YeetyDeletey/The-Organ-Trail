@@ -10,10 +10,12 @@ if keyboard_check_pressed(vk_enter) and global.trans = false or global.canclick 
             if(global.menu == 10000){
                 switch global.txtinput{
                   case 1:
-                      screenwipe(250, 400,12,1);
+                      screenwipe(250, 400,7,1);
+                      instance_create_depth(room_width/2, room_height/2-100, 1, oScreenwipebar);
                       break;
                   case 2:
-                      screenwipe(250, 400,12,2);
+                      screenwipe(250, 400,7,2);
+                      instance_create_depth(room_width/2, room_height/2-100, 1, oScreenwipebar);
                       break;
                   case 3:
                       screenwipe(250, 135,12,3);
