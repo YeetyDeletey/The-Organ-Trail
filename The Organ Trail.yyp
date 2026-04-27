@@ -68,6 +68,7 @@
   "resources":[
     {"id":{"name":"fSans","path":"fonts/fSans/fSans.yy",},},
     {"id":{"name":"oAnimal","path":"objects/oAnimal/oAnimal.yy",},},
+    {"id":{"name":"oAnimalTemplate","path":"objects/oAnimalTemplate/oAnimalTemplate.yy",},},
     {"id":{"name":"oBoolet","path":"objects/oBoolet/oBoolet.yy",},},
     {"id":{"name":"oBorder","path":"objects/oBorder/oBorder.yy",},},
     {"id":{"name":"oButton","path":"objects/oButton/oButton.yy",},},
@@ -127,6 +128,7 @@
     {"id":{"name":"DayCounter","path":"scripts/DayCounter/DayCounter.yy",},},
     {"id":{"name":"DesertEvents","path":"scripts/DesertEvents/DesertEvents.yy",},},
     {"id":{"name":"EasternForestEvents","path":"scripts/EasternForestEvents/EasternForestEvents.yy",},},
+    {"id":{"name":"GotAnimalFood","path":"scripts/GotAnimalFood/GotAnimalFood.yy",},},
     {"id":{"name":"HealthEvents","path":"scripts/HealthEvents/HealthEvents.yy",},},
     {"id":{"name":"hTextBox","path":"scripts/hTextBox/hTextBox.yy",},},
     {"id":{"name":"Menuvisual","path":"scripts/Menuvisual/Menuvisual.yy",},},

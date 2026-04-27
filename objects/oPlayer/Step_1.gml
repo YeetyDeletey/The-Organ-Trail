@@ -3,7 +3,7 @@ if (global.menu == 1) {
 	//keyboard inputs
 	lr = keyboard_check(ord("D")) - keyboard_check(ord("A"))
 	ud = keyboard_check(ord("S")) - keyboard_check(ord("W"))
-    shoot = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)
+    global.shoot = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)
     
 	//moving around
 	if (ud != 0) {
@@ -26,7 +26,7 @@ if (global.menu == 1) {
 	}
     
 	//shooting
-    if(shoot){
+    if(global.shoot){
         instance_create_depth(x, y, 1, oBoolet)
     }
     

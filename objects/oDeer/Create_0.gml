@@ -7,6 +7,13 @@ coll = false;
 alive = true
 meat = irandom(10)+65
 
+startled = false
+godir = 0
+ex = 0
+ey = 0
+
+image_yscale = 2
+
 //don't clip into wall
 while (place_meeting(x,y,oWall)) {
 	if (x == 0 || x == 1350) {
@@ -32,8 +39,3 @@ if(y == 800){
 	if random(1) > 0.4 {x_speed = -1 * x_speed}}
 if(y == 0){
 	if random(1) > 0.4 {x_speed = -1 * x_speed}}
-
-//visuals
-if (x_speed < 0) {image_xscale = -2}
-else {image_xscale = 2}
-image_yscale = 2

@@ -44,7 +44,7 @@ if(global.menu == 1){
 	    	instance_create_depth(1350, spawn1, 1, oDeer)
 	    }
     
-	    spawn_time_d = random(2) + 2
+	    spawn_time_d = random(2) + 2.5
 	}
 	else{
 		spawn_time_d -= delta_time/1000000
@@ -65,7 +65,7 @@ if(global.menu == 1){
 	    	instance_create_depth(1350, spawn1, 1, oSquirrel)
 	    }
     
-	    spawn_time_s = random(2) + 1
+	    spawn_time_s = random(2) + 1.5
 		spawn1 = random_range(0, 800)
 		spawn2 = random_range(0 ,1350)
 	}

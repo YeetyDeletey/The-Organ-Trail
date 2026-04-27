@@ -10,7 +10,6 @@ if (global.menu == 1) {
 		obj = collision_line(global.playerx, global.playery+ey,x,global.playery+ey,oWall,false,false)
 		if (obj != noone) {
 			//go around object
-			show_debug_message(obj.x)
 			if (global.playerx < x) {
 				mp_potential_step_object(obj.x - sprite_width/2,global.playery,spd,oWall)
 			} else {
@@ -31,7 +30,7 @@ if (global.menu == 1) {
 			dashing = 0
 			counter = 0
 			mult = 1
-		} else if (counter < 20) {	//charging up
+		} else if (counter < 20 + ((1-percsp) * 30)) {	//charging up
 			sprite_index = sLRDZC
 		} else {
 			sprite_index = sLRDZD
@@ -43,7 +42,7 @@ if (global.menu == 1) {
 			}
 			if (counter > 65) {
 				mult = int64((105-counter)/10)/4
-				if ((global.playerx - x) * dashing > 0) {counter = 19; mult = 1}
+				if ((global.playerx - x) * dashing > 0) {counter = 19 + ((1-percsp) * 30); mult = 1}
 			}
 		}
 		

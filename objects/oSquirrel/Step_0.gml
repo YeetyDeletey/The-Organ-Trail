@@ -1,53 +1,53 @@
-if(global.menu == 1){
+if(global.menu == 1 && alive){
+	//if shot
+	if(place_meeting(x,y,oBoolet)){
+		inst = instance_place(x, y, oBoolet);
+		if (inst != noone) {
+			instance_destroy(inst)}
+		alive = false
+		image_yscale = -2
+		if(oHuntingLogic.food_gained + meat <= 100){
+			gotanimalfood(meat,0)
+			oHuntingLogic.food_gained += meat;
+			global.food += meat;
+		}
+		else if(oHuntingLogic.food_gained + meat > 100 && oHuntingLogic.food_gained < 100){
+			gotanimalfood(meat,oHuntingLogic.food_gained+meat-100)
+			global.food += (100 - oHuntingLogic.food_gained);
+			oHuntingLogic.food_gained = 100;
+		}
+		else{
+			gotanimalfood(0,meat)
+		}
+	}
     
-    if(hit){
-        instance_destroy();
-        if(oHuntingLogic.food_gained <= 95){
-            oHuntingLogic.food_gained += 5;
-            global.food += 5;
-            oPlayer.amount = 5;
-            oPlayer.food_gained = true;
-        }
-        else if(oHuntingLogic.food_gained > 95 && oHuntingLogic.food_gained < 100){
-            global.food += (100 - oHuntingLogic.food_gained);
-            oPlayer.amount = (100 - oHuntingLogic.food_gained);
-            oHuntingLogic.food_gained = 100;
-            oPlayer.food_gained = true;
-        }
-        else{
-            oPlayer.food_gained = true;
-            oPlayer.amount = 0;
-        }
-    }
+	//movement
+	x += x_speed
+	if (place_meeting(x,y,oWall)) {
+		x -= x_speed * 2
+		x_speed *= -1
+	}
+	
+	y += y_speed
+	if (place_meeting(x,y,oWall)) {
+		y -= y_speed * 2
+		y_speed *= -1
+	}
    
-   if(place_meeting(x, y, oWall)){
-        if(place_meeting(x + x_speed, y, oWall)){
-            x_speed = -1* x_speed
-        }
-        if(place_meeting(x, y + y_speed, oWall)){
-            y_speed = -1* y_speed
-        }
-    }
-   
-   
-   x += x_speed 
-    y += y_speed
-   
-   
-   if(x > 1350 || x < -15 || y < -15 || y > 820){
-       instance_destroy()
-   }
-    if(place_meeting(x, y, oBorder)){
-        //show_debug_message("collided with border");
-        instance_destroy();
-    }
-   if(life < 0){ 
-    instance_destroy()
-    } 
-    else{
-        life -= delta_time/1000000
-    }
+	
+	//if timewise should despawn
+	if(life < 0){
+		instance_destroy()}
+	else{
+		life -= delta_time/1000000}
+    
+	//if border
+	if(place_meeting(x, y, oBorder)){
+		instance_destroy();
+	}
+	
+	//visual stuff
+	depth = -y
+	if (x_speed < 0) {image_xscale = -2}
+	else {image_xscale = 2}
 }   
-
-
-depth = -y

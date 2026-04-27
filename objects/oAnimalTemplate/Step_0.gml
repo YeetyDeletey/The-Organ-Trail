@@ -18,35 +18,16 @@ if(global.menu == 1 && alive){
 			gotanimalfood(0,meat)}
 	}
     
-	//get startled when shooting
-	if (global.shoot) {
-		startled = true
-		godir = arctan((y-global.playery)/(x-global.playerx))
-		if (x < global.playerx) {
-			ex = x - (cos(godir) * 1500)
-			ey = y - (sin(godir) * 1500)
-		} else {
-			ex = x + (cos(godir) * 1500)
-			ey = y + (sin(godir) * 1500)
-		}
-	}
+	//movement
+	x += x_speed
+	if (place_meeting(x,y,oWall)) {
+		x -= x_speed * 2
+		x_speed *= -1}
 	
-	//moving
-	if (!startled) {
-		//wander aimlessly
-		x += x_speed
-		if (place_meeting(x,y,oWall)) {
-			x -= x_speed * 2
-			x_speed *= -1}
-	
-		y += y_speed
-		if (place_meeting(x,y,oWall)) {
-			y -= y_speed * 2
-			y_speed *= -1}
-	} else {
-		//run away
-		mp_potential_step_object(ex,ey,5,oWall)
-	}
+	y += y_speed
+	if (place_meeting(x,y,oWall)) {
+		y -= y_speed * 2
+		y_speed *= -1}
    
 	
 	//other reasons to despawn

@@ -27,6 +27,7 @@ global.bulletsShot = 0;
 global.playerx = -1
 global.playery = -1
 global.htextbox = ""
+global.shoot = false
 
 //custom stats
 global.job = "" //b,c,f

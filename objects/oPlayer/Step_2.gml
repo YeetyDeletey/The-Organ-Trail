@@ -22,13 +22,3 @@ if (place_meeting(x,y,oZombie)) and invin == 0 {
 	}
 	bite = 0
 }
-
-if(food_gained){
-    if(amount > 0){
-        global.htextbox = "You gained " + string(amount) + " food."
-    }
-    else{
-        global.htextbox = "You are carrying the maximum amount of food.\nThe stench of the corpse will attract more zombies to the area"
-    }
-    food_gained = false;
-}
