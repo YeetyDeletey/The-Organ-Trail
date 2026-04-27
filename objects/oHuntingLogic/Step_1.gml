@@ -39,12 +39,12 @@ if(global.menu == 1){
 	    } else if(c == 2){
 	        instance_create_depth(spawn2, 800, 1, oDeer)
 	    } else if(c==3){
-	        instance_create_depth(0, spawn2, 1, oDeer)
+	        instance_create_depth(0, spawn1, 1, oDeer)
 	    } else {
-	    	instance_create_depth(1350, spawn2, 1, oDeer)
+	    	instance_create_depth(1350, spawn1, 1, oDeer)
 	    }
     
-	    spawn_time_d = random(2) + 3
+	    spawn_time_d = random(2) + 2
 	}
 	else{
 		spawn_time_d -= delta_time/1000000
@@ -59,13 +59,13 @@ if(global.menu == 1){
 	        instance_create_depth(spawn2, 800, 1, oSquirrel)
 	    }
 	    else if(c==3){
-	        instance_create_depth(0, spawn2, 1, oSquirrel)
+	        instance_create_depth(0, spawn1, 1, oSquirrel)
 	    }
 	    else {
-	    	instance_create_depth(1350, spawn2, 1, oSquirrel)
+	    	instance_create_depth(1350, spawn1, 1, oSquirrel)
 	    }
     
-	    spawn_time_s = random(2) + 2
+	    spawn_time_s = random(2) + 1
 		spawn1 = random_range(0, 800)
 		spawn2 = random_range(0 ,1350)
 	}

@@ -32,7 +32,3 @@ if(food_gained){
     }
     food_gained = false;
 }
-
-
-
-depth = -y

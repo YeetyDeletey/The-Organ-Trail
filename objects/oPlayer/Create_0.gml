@@ -15,3 +15,5 @@ bite = 0
 
 food_gained = false;
 amount = 0;
+
+spr = sPlayer_Neutral

@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oBorder",
-  "eventList":[],
+  "%Name":"oSomething",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oBorder",
+  "name":"oSomething",
   "overriddenProperties":[],
   "parent":{
-    "name":"Abstract objects",
-    "path":"folders/Objects/Hunting Stuff/Abstract objects.yy",
+    "name":"Zombies",
+    "path":"folders/Objects/Hunting Stuff/Zombies.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sBlack",
-    "path":"sprites/sBlack/sBlack.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

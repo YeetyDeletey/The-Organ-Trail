@@ -28,7 +28,7 @@ switch global.climate {
 }
 
 
-instance_create_depth(random(1350),random(750),1,oLRDashZombie)
+//instance_create_depth(random(1350),random(750),1,oLRDashZombie)
 
 
 draw_set_font(global.pressstart)
