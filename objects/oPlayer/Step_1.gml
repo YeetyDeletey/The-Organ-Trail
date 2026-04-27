@@ -28,6 +28,7 @@ if (global.menu == 1) {
 	//shooting
     if(shoot){
         instance_create_depth(x, y, 1, oBoolet)
+        global.bulletsShot+=1;
     }
     
 	//dealing with variables/visuals

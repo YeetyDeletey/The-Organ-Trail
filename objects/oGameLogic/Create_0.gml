@@ -11,6 +11,7 @@ global.txtinput = ""
 global.eventMenu = 0;
 
 
+
 //player stats
 global.money = 0
 global.oxen = 0
@@ -20,6 +21,7 @@ global.ammo = 0
 global.wheels = 0
 global.axles = 0
 global.tongues = 0
+global.bulletsShot = 0;
 
 //hunting stuff
 global.playerx = -1
@@ -35,7 +37,7 @@ global.month = 3
 global.smonth = "March"
 global.day = 1
 global.time = 8
-global.landmark = "l" //f for fort, r for river, l for landmark, empty for none, s for split 
+global.landmark = "l" //f for fort, r for river, l for landmark, empty for none, s for split, e for event
 global.showlandmark = sIndependence
 global.weather = "cool"
 global.phealth = "good"

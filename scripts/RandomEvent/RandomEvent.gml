@@ -25,11 +25,13 @@ function randomevent(){
 		//might be worth making the chance of this event type fluctuate based on which climate
 		switch global.climate {
 			case "eastern forest":
-			easternforestevents()
+			//easternforestevents();
+                rockymountainevents();
 			break;
 			
 			case "plains":
-			plainsevents()
+			//plainsevents();
+               rockymountainevents();
 			break;
 			
 			case "rocky mountains":
@@ -37,11 +39,13 @@ function randomevent(){
 			break;
 			
 			case "desert":
-			desertevents()
+			//desertevents();
+                rockymountainevents();
 			break;
 			
 			case "western forest":
-			westernforestevents()
+			//westernforestevents();
+                rockymountainevents();
 			break;
 		}
 		

@@ -27,8 +27,13 @@ switch global.climate {
 	break;
 }
 
-
-//instance_create_depth(random(1350),random(750),1,oLRDashZombie)
+if(global.bulletsShot > 5){
+    instance_create_depth(random(1350),random(750),1,oLRDashZombie)
+}
+if(global.bulletsShot > 10){
+    instance_create_depth(random(1350),random(750),1,oLRDashZombie)
+}
+instance_create_depth(random(1350),random(750),1,oLRDashZombie)
 
 
 draw_set_font(global.pressstart)
