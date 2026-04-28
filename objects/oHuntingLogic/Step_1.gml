@@ -36,6 +36,7 @@ if(global.menu == 1){
 	    var c = choose(1, 2, 3, 4)
 	    if(c == 1){
 	        instance_create_depth(spawn2, 0, 1, oDeer)
+            instance_create_depth(spawn2, 0, 1, oBear);
 	    } else if(c == 2){
 	        instance_create_depth(spawn2, 800, 1, oDeer)
 	    } else if(c==3){
