@@ -1,4 +1,4 @@
-life = 9;
+bearlife = 9;
 hit = false;
 coll = false;
 alive = true;
@@ -8,7 +8,9 @@ enraged = false;
 godir = 0;
 ex = 0;
 ey = 0;
-
+hit_time = 0;
+rage_time = 4;
+move_time = 3;
 image_yscale = 2;
 
 //don't clip into wall

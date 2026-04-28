@@ -3,10 +3,15 @@ if(global.menu == 1 && alive){
     if(place_meeting(x,y, oBoolet)){
         inst = instance_place(x, y, oBoolet);
         if (inst != noone) {
-            life -= 3;
+
+            bearlife -= 3;
+
+            var nearestBoolet = instance_nearest(x, y, oBoolet);
+            instance_destroy(nearestBoolet);
         }
         //when killed
-        if(life == 0){
+        if(bearlife == 0){
+
             instance_destroy(inst);
             alive = false;
             image_yscale = -2
@@ -28,9 +33,14 @@ if(global.menu == 1 && alive){
     }
     
     //when enraged
-    if(distance_to_object(oPlayer) < 200 || distance_to_object(oBoolet) < 100 || enraged){
+    if((distance_to_object(oPlayer) < 200 || distance_to_object(oBoolet) < 50 || enraged) && rage_time > 0){
         enraged = true;
         mp_potential_step_object(global.playerx,global.playery,3,oWall);
+        rage_time -= delta_time/1000000;
+    }
+    else{
+        enraged = false;
+        rage_time = 4;
     }
     
     if (!enraged) {
@@ -45,9 +55,26 @@ if(global.menu == 1 && alive){
 			y -= y_speed * 2
 			y_speed *= -1}
 	}
-    if(distance_to_object(oPlayer) < 15){
-        global.food = 0;
+    if(distance_to_object(oPlayer) < 15 && hit_time == 0){
+        hit_time = 1;
+        global.htextbox = "A bear attacked you.\nYou limp back to your camp\nunable to bring back any food.";
+        oHuntingLogic.food_gained = 0;
         global.time = 18;
+    }
+    
+    if(move_time < 0){
+        randomise();
+        x_speed = random_range(mins, maxs);
+        y_speed = random_range(mins, maxs);
+        move_time = random_range(3,5);
+    }
+    else if(move_time < 0.6){
+        x_speed = 0;
+        y_speed = 0;
+        move_time -= delta_time/1000000;
+    }
+    else{
+        move_time -= delta_time/1000000;
     }
     
     if(distance_to_object(oDeer) < 15){
