@@ -12,7 +12,10 @@
     "name":"Animals",
     "path":"folders/Objects/Hunting Stuff/Animals.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oAnimal",
+    "path":"objects/oAnimal/oAnimal.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

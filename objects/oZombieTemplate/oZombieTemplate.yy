@@ -12,7 +12,10 @@
     "name":"Templates",
     "path":"folders/Objects/Templates.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oZombie",
+    "path":"objects/oZombie/oZombie.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

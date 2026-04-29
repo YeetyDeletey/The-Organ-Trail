@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"oSomething",
+  "%Name":"oLazyZombie",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oSomething",
+  "name":"oLazyZombie",
   "overriddenProperties":[],
   "parent":{
     "name":"Zombies",
     "path":"folders/Objects/Hunting Stuff/Zombies.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oZombie",
+    "path":"objects/oZombie/oZombie.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sLazySitting",
+    "path":"sprites/sLazySitting/sLazySitting.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
