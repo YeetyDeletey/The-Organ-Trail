@@ -6,6 +6,10 @@ if (global.menu == 1) {
     global.shoot = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)
     
 	//moving around
+    if(ud != 0 && lr != 0){
+        ud *= 0.71;
+        lr *= 0.71;
+    }
 	if (ud != 0) {
 		y += move_speed * ud
 		dir = 2 + ud

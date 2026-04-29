@@ -1,6 +1,14 @@
 
 instance_create_depth(704,396,1,oPlayer)
 
+/*if(global.climate == "eastern forest"){
+    var lay_id = layer_get_id("Background");
+   var back_id = layer_background_get_id(lay_id);
+   layer_background_blend(back_id, #033303);
+}*/
+
+
+
 switch global.climate {
 	case "eastern forest":	//6-9, not content with how I draw trees
 	repeat(random_range(6,9)) {instance_create_depth(random(room_width-100)+50,random(room_height-100)+50,1,oTerrain,{spr:"dtree"})}

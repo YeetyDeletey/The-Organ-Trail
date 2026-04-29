@@ -63,9 +63,11 @@ if(global.menu == 1 && alive){
     }
     
     if(move_time < 0){
-        randomise();
-        x_speed = random_range(mins, maxs);
-        y_speed = random_range(mins, maxs);
+        
+        x_speed = random_range(0, maxs);
+        y_speed = random_range(0, maxs);
+        if random(1) > 0.4 {y_speed = -1 * y_speed}
+        if random(1) > 0.4 {x_speed = -1 * x_speed}
         move_time = random_range(3,5);
     }
     else if(move_time < 0.6){
@@ -79,6 +81,13 @@ if(global.menu == 1 && alive){
     
     if(distance_to_object(oDeer) < 15){
         var nearestDeer = instance_nearest(x, y, oDeer);
-        instance_destroy(nearestDeer);
+        nearestDeer.alive = false;
+        nearestDeer.image_yscale = -2;
+        
     }
 }
+
+//visual stuff
+	depth = -y
+	if (x_speed < 0) {image_xscale = -2}
+	else {image_xscale = 2}
