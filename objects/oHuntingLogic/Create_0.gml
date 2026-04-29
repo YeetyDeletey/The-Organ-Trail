@@ -7,31 +7,61 @@ instance_create_depth(704,396,1,oPlayer)
    layer_background_blend(back_id, #033303);
 }*/
 
+zoptions = []	//zoptions is the possible zombies to spawn
+poptions = []	//poptions is the cost to spawn each of those zombies
+mindelay = 20	//always waits this many frames between zombies minimum
+maxrand = 00	//max of a random extra amount of delay post zombie spawn
+points = 10		//number of points currently to buy stuff, gains in progress time
+zcounter = 60	//time between spawns
+//poptions[0] spawns in the zombie in zoptions[0], note that this means each zombie's cost
+//can be variable in different climates. Point buy system
 
-
+//switch statement below set up in format
+//spawning terrain
+//setting up point buy zombies stuff
+//potential spawning predetermined zombies/animals
 switch global.climate {
 	case "eastern forest":	//6-9, not content with how I draw trees
 	repeat(random_range(6,9)) {instance_create_depth(random(room_width-100)+50,random(room_height-100)+50,1,oTerrain,{spr:"dtree"})}
 	repeat(random_range(3,5)) {instance_create_depth(random(room_width-200)+100,random(room_height-200)+100,1,oTerrainVisual,{spr:"grass"})}
+	
+	zoptions = [oLurchingZombie,oLRDashZombie]
+	poptions = [20,40]
+	
+	while(random(1) < 0.3) {instance_create_depth(random(1350),random(750),1,oLazyZombie)}
 	break;
 			
 	case "plains":	//7-10 but actually 0 (all background)
 	repeat(random_range(7,10)) {instance_create_depth(random(room_width-200)+100,random(room_height-200)+100,1,oTerrainVisual,{spr:"grass"})}
+	
+	zoptions = [oLurchingZombie,oLRDashZombie]
+	poptions = [20,40]
+	
+	while(random(1) < 0.65) {instance_create_depth(random(1350),random(750),1,oLazyZombie)}
 	break;
 			
 	case "rocky mountains":	//6-14
 	repeat(random_range(3,7)) {instance_create_depth(random(room_width),random(room_height-200)+100,1,oTerrain,{spr:"rock"})}
 	repeat(random_range(3,7)) {instance_create_depth(random(room_width-200)+100,random(room_height),1,oTerrain,{spr:"ctree"})}
+	
+	zoptions = [oLurchingZombie,oLRDashZombie]
+	poptions = [20,40]
 	break;
 			
 	case "desert":	//8-15
 	repeat(random_range(2,4)) {instance_create_depth(random(room_width-200)+100,random(room_height-100)+50,1,oTerrain,{spr:"cacti"})}
 	repeat(random_range(3,6)) {instance_create_depth(random(room_width),random(room_height),1,oTerrain,{spr:"desert shrub"})}
 	repeat(random_range(2,5)) {instance_create_depth(random(room_width),random(room_height-200)+100,1,oTerrain,{spr:"rock"})}
+	
+	zoptions = [oLurchingZombie,oLRDashZombie]
+	poptions = [20,40]
 	break;
 			
 	case "western forest":	//7-10, not fully happy with it
 	repeat(random_range(7,10)) {instance_create_depth(random(room_width-100)+50,random(room_height-100)+50,1,oTerrain,{spr:"ctree"})}
+	
+	zoptions = [oLurchingZombie,oLRDashZombie]
+	poptions = [20,40]
 	break;
 }
 

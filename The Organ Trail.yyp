@@ -140,6 +140,7 @@
     {"id":{"name":"RockyMountainEvents","path":"scripts/RockyMountainEvents/RockyMountainEvents.yy",},},
     {"id":{"name":"Screenwipe","path":"scripts/Screenwipe/Screenwipe.yy",},},
     {"id":{"name":"SetTravel","path":"scripts/SetTravel/SetTravel.yy",},},
+    {"id":{"name":"SpawnAtEdge","path":"scripts/SpawnAtEdge/SpawnAtEdge.yy",},},
     {"id":{"name":"Square","path":"scripts/Square/Square.yy",},},
     {"id":{"name":"Text","path":"scripts/Text/Text.yy",},},
     {"id":{"name":"TextBox","path":"scripts/TextBox/TextBox.yy",},},

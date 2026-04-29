@@ -2,6 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function nextday(){
 	
+	global.bulletsShot = int64(global.bulletsShot * 0.7)		//reduce noise
+	show_debug_message(global.bulletsShot)
+	
 	global.food -= global.eat									//eat food
 	
 	

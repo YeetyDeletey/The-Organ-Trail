@@ -1,5 +1,5 @@
 
-while (place_meeting(x,y,oWall)) {
+while (place_meeting(x,y,oWall) || distance_to_object(oPlayer) < 400) {
 	x = random(room_width)
 	y = random(room_height)
 }

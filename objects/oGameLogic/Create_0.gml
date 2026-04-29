@@ -98,5 +98,5 @@ instance_create_depth(x,y,1,oGotoroom)
 
 
 randomize()
-
+game_set_speed(60, gamespeed_fps)
 
