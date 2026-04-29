@@ -9,4 +9,8 @@ hp = starthp
 percsp = 1
 spd = 2
 
+distop = 2000
+spd = 0
+alerted = false
+
 //don't forget to make the sprite center top

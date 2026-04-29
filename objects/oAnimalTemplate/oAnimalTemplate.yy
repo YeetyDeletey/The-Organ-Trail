@@ -12,7 +12,10 @@
     "name":"Templates",
     "path":"folders/Objects/Templates.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oAnimal",
+    "path":"objects/oAnimal/oAnimal.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
