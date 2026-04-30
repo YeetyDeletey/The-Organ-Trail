@@ -53,8 +53,7 @@ if(global.menu == 1 && alive){
 	if(life < 0){	//timer
 		instance_destroy()}
 	else{
-		life -= delta_time/1000000
-    }
+		life -= delta_time/1000000}
 	if(place_meeting(x, y, oBorder)){ //border
 		instance_destroy();}
 	

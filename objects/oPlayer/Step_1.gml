@@ -9,8 +9,23 @@ if (global.menu == 1) {
     if(ud != 0 && lr != 0){
         ud *= 0.71;
         lr *= 0.71;
+        y += move_speed * ud
+        repeat(move_speed) {
+			if(place_meeting(x,y,oWall)) {
+				y -= ud
+			}
+		}
+        x += move_speed * lr
+        repeat(move_speed) {
+			if(place_meeting(x,y,oWall)) {
+				x -= lr
+			}
+		}
+        dir = 2 + (ud/0.71);
+        dir = 3 + (lr/0.71);
     }
-	if (ud != 0) {
+    else{
+        if (ud != 0) {
 		y += move_speed * ud
 		dir = 2 + ud
 		repeat(move_speed) {
@@ -18,16 +33,18 @@ if (global.menu == 1) {
 				y -= ud
 			}
 		}
-	}
-	if (lr != 0) {
-		x += move_speed * lr
-		dir = 3 + lr
-		repeat(move_speed) {
-			if(place_meeting(x,y,oWall)) {
-				x -= lr
-			}
-		}
-	}
+      	}
+      	if (lr != 0) {
+      		x += move_speed * lr
+      		dir = 3 + lr
+      		repeat(move_speed) {
+      			if(place_meeting(x,y,oWall)) {
+      				x -= lr
+      			}
+      		}
+      	}
+    }
+	
     
 	//shooting
     if(global.shoot){

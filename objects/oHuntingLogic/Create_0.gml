@@ -82,6 +82,7 @@ counter = 0
 
 spawn_time_d = random(2)
 spawn_time_s = random(2)
+spawn_time_b = random(5);
 
 spawn1 = random_range(0, 800)
 spawn2 = random_range(0 ,1350)

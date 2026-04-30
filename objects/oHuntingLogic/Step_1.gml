@@ -21,6 +21,7 @@ if(global.menu == 1){	//while hunting occurring
     if(spawn_time_d <= 0){
 	    spawnatedge(oDeer)
 	    spawn_time_d = random(2) + 2.5}
+
 	else{
 		spawn_time_d -= delta_time/1000000}
 
@@ -65,5 +66,28 @@ if(global.menu == 1){	//while hunting occurring
 	    global.trans = false;
 		room_goto(rThinkingScreen)
 	}
+    if(spawn_time_b <= 0){
+        var c = choose(1, 2, 3, 4);
+        if(c == 1){
+	        instance_create_depth(spawn2, 0, 1, oSquirrel);
+	    }
+	    else if(c == 2){
+	        instance_create_depth(spawn2, 800, 1, oSquirrel);
+	    }
+	    else if(c==3){
+	        instance_create_depth(0, spawn1, 1, oSquirrel);
+	    }
+	    else {
+	    	instance_create_depth(1350, spawn1, 1, oSquirrel);
+	    }
+    
+	    spawn_time_b = random(5) + 1.5;
+		spawn1 = random_range(0, 800);
+		spawn2 = random_range(0 ,1350);
+    }
+    else{
+        spawn_time_b -= delta_time/1000000;
+    }
+    
 }
 

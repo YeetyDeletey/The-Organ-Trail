@@ -1,6 +1,5 @@
-//haha this object is called "oh dear!"
 
-life = 20
+life = 20;
 
 hit = false;
 coll = false;
@@ -11,8 +10,8 @@ startled = false
 godir = 0
 ex = 0
 ey = 0
-move_time = 3;
 
+move_time = 3;
 
 image_yscale = 2
 

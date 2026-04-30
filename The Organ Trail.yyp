@@ -150,6 +150,8 @@
     {"id":{"name":"Write","path":"scripts/Write/Write.yy",},},
     {"id":{"name":"sBanner","path":"sprites/sBanner/sBanner.yy",},},
     {"id":{"name":"sBear","path":"sprites/sBear/sBear.yy",},},
+    {"id":{"name":"sBearE","path":"sprites/sBearE/sBearE.yy",},},
+    {"id":{"name":"sBearW1","path":"sprites/sBearW1/sBearW1.yy",},},
     {"id":{"name":"sBigBlueRiverCrossing","path":"sprites/sBigBlueRiverCrossing/sBigBlueRiverCrossing.yy",},},
     {"id":{"name":"sBlack","path":"sprites/sBlack/sBlack.yy",},},
     {"id":{"name":"sBnuuy","path":"sprites/sBnuuy/sBnuuy.yy",},},

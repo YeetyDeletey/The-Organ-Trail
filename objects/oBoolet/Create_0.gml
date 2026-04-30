@@ -3,6 +3,7 @@ xspeed = 0
 yspeed = 0
 
 dir = oPlayer.dir
+show_debug_message(dir);
 spd = 15
 
 if(dir == 2){
