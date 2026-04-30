@@ -26,10 +26,13 @@ while (place_meeting(x,y,oWall)) {
 }
 
 //set speed
-mins = 1
 maxs = 2
-x_speed = random_range(mins, maxs)
-y_speed = random_range(mins, maxs)
+x_speed = random_range(0, maxs)
+y_speed = random_range(0, maxs)
+while (x_speed + y_speed < maxs) {
+	x_speed = random_range(0, maxs)
+	y_speed = random_range(0, maxs)
+}
 
 if(x == 1350){
     x_speed = -1 * x_speed

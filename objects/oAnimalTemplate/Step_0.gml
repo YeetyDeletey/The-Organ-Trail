@@ -40,6 +40,6 @@ if(global.menu == 1 && alive){
 	
 	//visual stuff
 	depth = -y
-	if (x_speed < 0) {image_xscale = -2}
-	else {image_xscale = 2}
+	if (x_speed < 0) {image_xscale = -sc}
+	else {image_xscale = sc}
 }   
